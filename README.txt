@@ -1,0 +1,203 @@
+= RubyFIT -- FIT for Ruby
+
+This is RubyFIT, a Ruby port of the original Framework for Interactive
+Testing written in Java by Ward Cunningham. See RubyFIT's home page at
+http://fit.rubyforge.org for further information.
+
+Author:: Giulio Piancastelli <giulio.piancastelli@gmail.com>
+Requires:: Ruby 1.8 or later
+License:: RubyFIT is Copyright 2004-2006 by Giulio Piancastelli.
+          FIT is Copyright 2002 by Cunningham & Cunningham, Inc.
+          Both FIT and RubyFIT are released under the terms of the GNU
+          General Public License version 2 or later.
+
+Document created on Saturday 11th December, 2004.
+Last revised on Saturday 20th May, 2006.
+
+== Quick Start
+
+=== Unit tests and examples
+
+If you want to be sure that at least something is working in the
+framework, the first thing you could do is to run the unit tests that
+accompany RubyFIT. You have the chance of running unit tests during
+the installation of RubyFIT as a gem on your system. (See RubyGems at
+http://rubygems.rubyforge.org and its documentation for details on how
+to do it.) When RubyFIT is installed, you still can run unit tests just
+by moving into its installation directory in the Ruby environment (e.g.
+<tt>$RUBY_HOME/lib/ruby/gems/1.8/gems/fit-1.1/</tt>) and typing +rake+
+at the Terminal or Command Prompt in that directory, which contains
+RubyFIT's Rakefile. If you don't have Rake installed, you can still
+manually run tests by executing the <tt>test/all_tests.rb</tt> script.
+
+But the RubyFIT gem also comes with a series of examples directly taken
+from the official FIT wiki (see http://fit.c2.com). HTML files
+containing test data in tables are stored under the
+<tt>doc/examples</tt> directory. If you want to run them to verify that
+the framework passes them, just type <tt>rake fit</tt> at the Terminal
+or Command Prompt in the directory containing RubyFIT's Rakefile.
+Typing <tt>rake fit_report</tt> instead will also have the effect of
+generating reports for those tests, so that you can see green, red,
+yellow and gray cells with your own eyes.
+
+The specification for FIT 1.1 compliant implementations is also
+included, in the <tt>doc/spec</tt> directory. Running
+<tt>rake fitspec</tt> or <tt>rake fitspec_report</tt> will have the
+same effects described above in the context of RubyFIT's examples.
+
+If you don't have Rake (see http://rake.rubyforge.org) installed, you
+can still running FIT examples and specifications using the command
+line tool provided with the RubyFIT distribution. See next section for
+a brief explanation of its usage.
+
+After having verified the capabilities of the framework, you would
+like to start writing your own fixtures testing your applications.
+Follow the online tutorials to understand how to plug into RubyFIT
+and create fixtures and HTML tables with test data.
+
+=== RubyFIT from the command line
+
+A sample command-line script is included in the +bin+ subdirectory of
+the RubyFIT gem to help you run tests in the most painless way. Being
+RubyFIT a gem, the executable scripts to be used as commands from a
+Terminal or Console prompt are made available at any file system
+location.
+
+You can invoke the +fit+ script passing two arguments: the first is the
+HTML file containing tables to be tested, the second is the name of the
+HTML file which will be created by RubyFIT and will contain the results
+of the tests.
+
+=== RubyFIT from a web server
+
+A sample CGI script is included in the +bin+ subdirectory of the
+RubyFIT gem, just to let you have a glance at how RubyFIT can be used
+behind a web server. Put <tt>fit.cgi</tt> in the <tt>cgi-bin</tt>
+directory under your web server tree (or in an equivalent appropriate
+location), then change the shebang line to point to the location of the
+Ruby interpreter on your machine. Finally, change the location to
+RubyFIT pointing to the directory you have downloaded the code, and the
+location to your fixtures to whatever directory you use to collect your
+Ruby classes derived from Fit::Fixture.
+
+You should now be able to use RubyFIT behind a web server. Write an
+HTML page containing tables for one of your fixtures, and remember to
+add a link to the <tt>fit.cgi</tt> script: serve it through the web
+server you have installed <tt>fit.cgi</tt> within, then click on the
+<tt>fit.cgi</tt> link to run the tests and get a result page in
+response.
+
+=== RubyFIT from Rake
+
+RubyFIT tests can also be run from within the Rake build tool. See the
+online RubyFIT documentation for a brief tutorial on how to use the
++FitTask+ task in your Rakefile. Visit http://rake.rubyforge.org for
+further details about Rake.
+
+=== RubyFIT in FitNesse
+
+You can now run RubyFIT tests in FitNesse. (See http://fitnesse.org
+for general information on FitNesse.) Define the command pattern like so:
+"!define COMMAND_PATTERN {/path/to/ruby/ruby -I %p -I /path/to/RubyFIT/lib 
+/path/to/RubyFIT/bin/FitServer.rb}" changing the paths as appropriate.
+
+There is no need to use a separate RubyFIT package to use it from
+within Fitnesse. After installing RubyFIT as a gem in your Ruby
+environment, you can reference the <tt>FitServer.rb</tt> script in
+Fitnesse from the location of the installed gem. For instance you can
+set the latest parameter defining the command pattern to the string
+<tt>/usr/lib/ruby/gems/1.8/gems/fit-1.1/bin/FitServer.rb</tt> for some
+Linux flavors.
+
+== RubyFIT Development Issues
+
+Being Ruby a much more different language than Java, RubyFIT carries
+some of those unique characteristics, sometimes bulding on them,
+sometimes suffering from them. Here follows a uncomplete list of
+issues in the development of RubyFIT, taken from the examples bundled
+with the RubyFIT distribution.
+
+==== Float Arithmetic
+
+In <tt>arithmetic.html</tt> Ruby does math differently from Java. A
+workaround is implemented in Fit::TypeAdapter#equals: if one of the
+object is a Float and the other is a Numeric, equality is tested on a
+1.0e-5 delta. Also, in <tt>CalculatorExample.html</tt> Ruby does Floats
+with much more precision than Java, so that even a 1.0e-15 or -1.0e-17
+difference is retained. A workaround in Fit::ScientificDouble has been
+implemented, so that if the precision is exactly zero, the values of
+two comparing objects must be equals in a 1.0e-5 delta.
+
+Note than in <tt>AllCombinations.html</tt> Ruby does even
+ScientificDouble with much more precision than the Java version. So,
+another workaround in <tt>==</tt> and <tt><=></tt> had to be employed,
+specifically to create another ScientificDouble to compare with and to
+pick the precision of the less precise of the two to make the
+comparison.
+
+==== Reflection in Fit::Fixture
+
+Being Ruby a dynamically typed programming language, it does not hold
+static typing information about fields and values returned from
+methods. The FIT framework instead uses those information to make
+automatic comparisons between expected and actual results while running
+tests using HTML tables as input data.
+
+RubyFIT covers that mechanisms for basic types only. When a fixture
+uses custom types instead, some additional static metadata must be
+provided to let the framework know about types of fields and return
+types of methods.
+
+The online tutorials provide some examples on using metadata in
+fixtures and related classes.
+
+==== Class names from 'eg.AllFiles$Example' strings in Fit::Fixture
+
+The syntax of fixtures class names into HTML tables is directly taken
+from the Java world, where FIT was originally being developed. The
+fully specified name of a class in Java is typically composed by a
+series of words separated by dots: the last word is the name of the
+class, while the other words identify the packages in which that class
+is contained. RubyFIT translates those names into Ruby class names: the
+name of the class remains unchanged, while package names (typically
+written in lower case as per Java conventions) get capitalized; the
+double colon is used instead of the dot as a separator between names.
+
+A particular syntax is used in the Java world for inner classes, i.e.
+classes defined inside other classes: in this case, a dollar sign is
+used as a separator between the names of the parent and the child
+classes. RubyFIT just translates the separator into a double colon,
+leaving class names untouched.
+
+==== Method names from HTML in Fit::TypeAdapter
+
+RubyFIT uses Fitnesse-style graceful naming, modified to suit Ruby's
+syntax and customs. For example, given any of these names in a row or
+column fixture: <tt>some_method()</tt>, <tt>some method()</tt>,
+<tt>some*method()</tt>, <tt>SomeMethod()</tt>, or
+<tt>Some Method()</tt>, it will call the method +some_method+,
+expecting it to be an output method (or getter), or the equivelent
+accessor generated by +attr_reader+. Given any of the above names, with
+the <tt>()</tt> replaced by <tt>?</tt>, such as <tt>some method?</tt>
+it will match the same methods, but will prefer a method named
+<tt>some_method?</tt>, if it exists. Any of the above names, with the
+<tt>()</tt> removed (and no <tt>?</tt>) will be interpreted as an input
+method (or setter) and will match <tt>some_method=(value)</tt>, as well
+as mutators generated by +attr_writer+.
+
+== Acknowledgements
+
+=== Credits
+
+The main developer and project maintainer is Giulio Piancastelli.
+
+Other developers have contributed code to the project:
+- Micah Martin
+- Jim Hughes
+- Brian Marick
+- Bret Pettichord
+
+=== Special Thanks
+
+Thanks to Ward Cunningham for creating FIT, and to Jim Shore for
+coordinating the effort of porting FIT to platforms other than Java.

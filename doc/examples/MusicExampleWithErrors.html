@@ -1,0 +1,128 @@
+<html>
+<head>
+	<title>Wiki: Music Example With Errors</title>
+<head>
+<body bgcolor=#FFFFFF link=#d06040 vlink=#806040>
+	<h1>Music Example With Errors</h1>
+	<wiki>In this example we describe a music player as if we were operating it. This is an intentionally corrupted version of the MusicExample that shows how various errors are reported.
+<p>We'll write the remainder of this page as if it were describing stories for the music player. We'll use italics when we want to point out features of the framework. You might as well run the example now before you continue reading.
+<p><UL>
+<li> <a href="run.cgi">http:run.cgi</a>
+<p><p><p></UL>
+<hr>
+<p><strong>Browsing Music</strong>
+<p>The music browser starts up looking at the whole library of songs. We specify the library (an advanced feature) so that we know what we are talking about in this document. 
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=3> fit.ActionFixture </td></tr>
+<tr><td> start </td><td> eg.music.Browser </td><td>&nbsp;</td></tr>
+<tr><td> enter </td><td> library </td><td> Source/eg/music/Music.txt </td></tr>
+<tr><td> check </td><td> total songs </td><td> 36 </td></tr>
+</table>
+<p><em>This is a the file that library reads. It is tab separated text. Try downloading it and looking at it with a spreadsheet. <a href="Release/Source/eg/music/Music.txt">http:Release/Source/eg/music/Music.txt</a></em>
+<p>We can pick songs and see details of our selection as we go. 
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=3> fit.ActionFixture </td></tr>
+<tr><td> enter </td><td> select </td><td> 1 </td></tr>
+<tr><td> check </td><td> title </td><td> Akila </td></tr>
+<tr><td> check </td><td> artist </td><td> Toure Kunda </td></tr>
+<tr><td> enter </td><td> select </td><td> 2 </td></tr>
+<tr><td> check </td><td> title </td><td> American Tango </td></tr>
+<tr><td> check </td><td> artist </td><td> Weather Report </td></tr>
+<tr><td> check </td><td> album </td><td> Mysterious Traveller </td></tr>
+<tr><td> check </td><td> year </td><td> 1975 </td></tr>
+<tr><td> check </td><td> time </td><td> 3.70 </td></tr> 
+<tr><td> check </td><td> track </td><td> 2 of 7 </td></tr>
+</table>
+<p><em>ActionFixture interprets the words in the first column. The </em>check<em> action leads to a comparison of </em>expected<em> values from the table with </em>actual<em> values from the music program.</em>
+<p><hr>
+<p><strong>Playing Music</strong>
+<p>Once we've picked a song, we can play it. We can continue operating the Brower while music is playing.
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=3> eg.music.Realtime </td></tr>
+<tr><td> press </td><td> play </td><td>&nbsp;</td></tr>
+<tr><td> check </td><td> status </td><td> loading </td></tr>
+<tr><td> pause </td><td> 2 </td><td>&nbsp;</td></tr>
+<tr><td> check </td><td> status </td><td> playing </td></tr>
+<tr><td> pause </td><td> 2 </td><td>&nbsp;</td></tr>
+<tr><td> check </td><td> status </td><td> playing </td></tr>
+<tr><td> check </td><td> time </td><td> 3.70 </td></tr>
+<tr><td> press </td><td> pause </td><td>&nbsp;</td></tr>
+<tr><td> check </td><td> status </td><td> pause </td></tr>
+<tr><td> check </td><td> remaining </td><td> 3.66 </td></tr>
+<tr><td> pause </td><td> 60 </td><td>&nbsp;</td></tr>
+<tr><td> check </td><td> remaining </td><td> 3.66 </td></tr>
+<tr><td> press </td><td> play </td><td>&nbsp;</td></tr>
+<tr><td> check </td><td> status </td><td> playing </td></tr>
+<tr><td> pause </td><td> 60 </td><td>&nbsp;</td></tr>
+<tr><td> check </td><td> remaining </td><td> 2.66 </td></tr>
+<tr><td> await </td><td> play complete </td><td>&nbsp;</td></tr>
+<tr><td> check </td><td> status </td><td> ready </td></tr>
+</table>
+<p><em>The RealtimeActionFixture is a Fixture that adds actions having to do with realtime operation of the music player. We start by pressing </em>play<em> and then waiting for the </em>status<em> to show that it is playing. This music takes 2.5 seconds to start playing so it still says </em>loading<em> after our 2 second pause.</em>
+<p><em>Warning: Don't confuse the </em>pause<em> action with the </em>pause<em> button. The pause action appears in column one where it is interpreted by the Simulator as if the user hesitates for a specified number of seconds. The pause button is a button on the music player part of the Browser screen. The </em>press<em> action activates the pause button which causes the currently playing song to stop temporarily.</em>
+<p><hr>
+<p><strong>Searching for Music</strong>
+<p>There are buttons on the browser to find more songs like the one we have picked.
+<p>We can find songs related in different ways. Each new way produces a (possibly) different list of songs. <em>Show all</em> restores the display to the initial conditions.
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=3> eg.music.Realtime </td></tr>
+<tr><td> press </td><td> show all </td><td>&nbsp;</td></tr>
+<tr><td> check </td><td> selected songs </td><td> 37 </td></tr>
+<tr><td> enter </td><td> select </td><td> 3 </td></tr>
+<tr><td> check </td><td> artist </td><td> James Taylor </td></tr>
+<tr><td> press </td><td> same artist </td><td>&nbsp;</td></tr>
+<tr><td> check </td><td> selected songs </td><td> 5 </td></tr>
+</table>
+<p><em>We left out the </em>await<em> actions so we are mashing buttons every second or so, faster than the searches complete. We're still getting the music we wanted because the search routines don't yet do a very good job of simulating being slow.</em>
+<p>Yielding the display:
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=6> eg.music.Display </td></tr>
+<tr><td> title </td><td> artist </td><td> album </td><td> year </td><td> time() </td><td> track() </td></tr>
+<tr><td> Handy Man </td><td> James Taylor </td><td> JT </td><td> 1977 </td><td> 3.30 </td><td> 7 of 12 </td></tr>
+<tr><td> Scarlet Woman </td><td> Weather Report </td><td> Mysterious Traveller </td><td> 1974 </td><td> 5.72 </td><td> 6 of 7 </td></tr>
+<tr><td> Sailing To Philadelphia </td><td> James Taylor </td><td> October Rose </td><td> 2000 </td><td> 5.47 </td><td> 3 of 3 </td></tr>
+<tr><td> Ananas </td><td> James Taylor </td><td> Hourglass </td><td> 1997 </td><td> 5.73 </td><td> 5 of 13 </td></tr>
+<tr><td> Another Gray Morning </td><td> James Taylor </td><td> JT </td><td> 1977 </td><td> 2.73 </td><td> 4 of 12 </td></tr>
+</table>
+<p><em>The song Scarlet Woman is marked as missing because our search did not return this row. It really is missing, and rightfully so, because it isn't a James Taylor song.</em>
+<p><em>The song Another Gray Morning is marked as missing because there is no song spelt that way in the result set. When left hand columns (the keys) disagree then we don't get a chance to compare the remaining columns.</em>
+<p><em>The song Copperline wasn't expected in the result set so it is marked as </em>surplus.<em> The framework adds all the surplus songs to the table so that they can be seen. The show up with printing in light gray as a reminder that they are not a part of the original document.</em>
+<p><p><em>This completes the MusicExample.</em>
+<p><hr>
+<p><p>Now we consider some degenerate cases just to be sure that they work. Suppose we did not uniquely identify rows. We have two songs from JT. What happens when there are surplus (only one expected) ? When there are missing (three expelcted)?
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=6> eg.music.Display </td></tr>
+<tr><td> album </td><td> genre </td></tr>
+<tr><td> October Rose </td><td> Pop </td></tr>
+<tr><td> Hourglass </td><td> Pop </td></tr>
+<tr><td> New Moon Shine </td><td> Pop </td></tr>
+<tr><td> JT </td><td> Pop </td></tr>
+</table>
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=6> eg.music.Display </td></tr>
+<tr><td> album </td><td> genre </td></tr>
+<tr><td> JT </td><td> Pop </td></tr>
+<tr><td> October Rose </td><td> Pop </td></tr>
+<tr><td> JT </td><td> Pop </td></tr>
+<tr><td> Hourglass </td><td> Pop </td></tr>
+<tr><td> JT </td><td> Pop </td></tr>
+<tr><td> New Moon Shine </td><td> Pop </td></tr>
+</table>
+<p><hr>
+<p>We've run quite a few test. We'll call up one more Fixture that will add a summary to the end of our document.
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=2> fit.Summary </td></tr>
+</table>
+<p>This is our most complete standard example. You can run it against more than one fit implementation by choosing any one of these specialized RunScript.
+<p><UL>
+<li> <a href="files/LispPlatform/runScheme.cgi">http:files/LispPlatform/runScheme.cgi</a>
+<li> <a href="files/LispPlatform/runLisp.cgi">http:files/LispPlatform/runLisp.cgi</a>
+<p></UL>
+(Caution: these scripts can't login. Run them from the public wiki pages.)
+<p> 
+</wiki>
+<hr>
+	Last edited April 21, 2003
+</body>
+</html>
+

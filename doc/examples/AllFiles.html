@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Wiki: All Files</title>
+<head>
+<body bgcolor=#FFFFFF link=#d06040 vlink=#806040>
+    <h1>All Files</h1>
+    <wiki>This is the first of a suite of fixtures that make up the AllPairsExample. It and AllCombinations are warmups for AllPairs testing.
+<p><hr>
+<p>A project can expect to have dozens to hundreds of files filled with specifications, explainations and associated tests. The AllFiles fixture seeks out these files and runs them all, one after another, and reports a "rolled-up" accounting of their results.
+<p>Like the ExampleTests fixture, the AllFiles fixture will take as its tabular input a list of files to be run. But here, unlike that fixture, we will expand wildcard characters in order to find all the tests in a particular place, whether we know what they are now or not.
+<p>Here are wildcard path expressions that find lots of other tests. Try runing them with <a href="run.cgi">http:run.cgi</a>.
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=2> eg.AllFiles </td></tr>
+<tr><td> doc/examples/*Example.html </td><td>&nbsp;</td></tr>
+<tr><td> doc/examples/Music*.html </td><td>&nbsp;</td></tr>
+</table>
+<p>The AllFiles fixture adds rows to this table for each of the files it finds. The first column is the expanded file name, the second, the resulting counts for that run. We mark the results "wrong" if there are any wrongs or exceptions. That means the above tests will never pass because we have intentional errors in these files.
+<p>Use AllFiles when you expect all your tests to pass and only want to know when this expectation is unfounded. AllFiles does not create output files for the tests it runs unless there is a problem. Problem run results are saved and cited along with the counts in a FileFootnote that looks like [1], [2], and so on.
+<p>Test counts can sore when we start running files over and over. LessonsLearned advise us to not take big "right" counts too seriously so we don't. In fact a file with 100 right and no wrong counts as 1 right from this fixtures perspective. You can see this in the <em>counts</em> reported in the summary:
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=2> fit.Summary </td></tr>
+</table>
+<p>(Note: See more complete summary below.)
+<p>You will also note that the fixture reports total counts for the files it runs under <em>counts run</em> in the summary because, lessons not withstanding, we like to know.
+<p><hr>
+<p><strong>Implementation</strong>
+<p>The fixture distinguishes expandings the path specifications (doRow) from running the list of files produced (doFiles). This fixture does the files as they are expanded. The AllCombinations and AllPairs refinements expand all rows before they start doing.
+<p>The path expansion only expands one wildcard character, star (*), which means <em>any characters</em> here. The star can appear anywhere in a name and in any or all names that make up a path. But the expansion we've coded has the restriction that only one star is expanded in any component of the path.
+<p>The expanded file names will refer to files that may or may not use the &lt;wiki&gt; tag convention (See WikiRunner). This fixture is happy to run either file format and lets the presence of a &lt;wiki&gt; tag in the file indicate the need for its processing.
+<p>See the source.
+<p><UL>
+<li> <a href="Release/Source/eg/AllFiles.java">http:Release/Source/eg/AllFiles.java</a>
+<p></UL>
+This class includes an implementation of FileFootnote that is discussed on that page.
+<p><hr>
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=2> eg.AllFiles$Expand </td></tr>
+<tr><td> path </td><td> expansion() </td></tr>
+<tr><td> doc/examples/*Example.html </td><td> CalculatorExample.html,MusicExample.html,NetworkExample.html,WebPageExample.html </td></tr>
+<tr><td> doc/examples/Music*.html </td><td> MusicExample.html,MusicExampleWithErrors.html </td></tr>
+<tr><td> doc/examples/AllPairs/magnitude/*.html </td><td> 180+30.html,30.html,360+30.html,90-30.html </td></tr>
+<tr><td> doc/examples/AllPairs/sign/*.html </td><td> change-sign.html,multiply.html,no-change.html </td></tr>
+<tr><td> doc/examples/AllPairs/function/*.html </td><td> cosine.html,sine.html </td></tr>
+<tr><td> doc/examples/AllPairs/function/*sine.html </td><td> cosine.html,sine.html </td></tr>
+<tr><td> doc/examples/AllPairs/function/*.xml </td><td>&nbsp;</td></tr>
+<tr><td> doc/examples/AllPairs/func* </td><td>&nbsp;</td></tr>
+<tr><td> doc/examples/AllPairs/* </td><td>&nbsp;</td></tr>
+<tr><td> doc/examples/AllPairs* </td><td>&nbsp;</td></tr>
+<tr><td> doc/examples/* </td><td>&nbsp;</td></tr>
+</table>
+<p>We've added some more tests to this document so the totals in the summary increase.
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=2> fit.Summary </td></tr>
+</table>
+<p></wiki>
+<hr>
+    Last edited April 20, 2003
+</body>
+</html>
+

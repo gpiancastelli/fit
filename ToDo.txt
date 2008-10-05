@@ -1,0 +1,56 @@
+*** TODOs
+
+- A better Array string representation in TypeAdapter#to_s(value).
+- Better comment the reflection code in Fit::Fixture.
+- TypeAdapter#invoke and IllegalAccessException in Fixture#check.
+- Fit::TypeAdapter#on vs. Fit::TypeAdapter#for.
+- Check RowFixtureTest: why does it fail? What does it do? Counts are
+  at 0, 0, 0, 0; missings are at 1, surpluses are at 1.
+- Parsing of new types: MyClass#parse? See BusinessObject in RowFixtureTest.
+
+
+DONE Fix paths in Fit::Parse#footnote and directory structure for RubyGems and
+     tests.
+DONE A command line script to process HTML files, e.g. fit.rb in.html out.html
+DONE Adopt public/protected/private visibility modifiers to Ruby code.
+DONE Condense NOT_BREAKING_SPACE in Fit::Parse.
+DONE How to express Unicode character sequences in Ruby? -- For
+     characters such as \u00nn, there is an hex equivalent of
+     \xnn. More specifically, \u4321 is a UTF-16BE encoding, so you
+     would need to know the equivalent UTF-8 encoding, e.g., \xe4\x8c\xa1.
+DONE Fix spec/parse.html on Fat::ParseFixture.
+DONE Fix Eg::WebPageExample example -- 12, 8, 0, 3 exactly as the Java version.
+DONE How Fit::PrimitiveFixture should check values? -- For now, it all works.
+     Should I add more parse_* and check_* methods in the future?
+DONE Fix Fit::RowFixture as per Eg::WebPageExample results -- No fix was needed,
+     instead a little trick on Eg::Page::Row has been played to pick the right
+     type of number (Integer or Float) from a textual cell.
+DONE Where are eg/ColumnIndex.java and eg/Sqrt.java employed? -- They are employed
+     in examples, in ColumnIndex.html and ExampleErrors.html. They also show how
+     Ruby is different from Java: ExampleErrors.html gives 4, 1, 0, 0 because of
+     Ruby's Float precision; ColumnIndex.html gives 30, 20, 8, 0 because of the
+     impossibility of knowing the return type of a Ruby method.
+DONE RowFixture#get_target_class ??? -- Never to implement!
+DONE Test FIT behind a web server and with a pure Ruby Fixture (also in fixture
+     names in the HTML tables).
+DONE Inner classes in Ruby and 'eg.AllPairs$Example' parsing during reflection.
+DONE A copyright for myself on RubyFIT? -- Yeah, no copyright.
+
+*** Testing
+
+1. rake (in the Rakefile directory) -- Everything must pass
+2. fit/file_runner.rb examples/ExampleTests.html reports/ExampleTests.html
+   -- Everything must pass except the All* tests:
+   AllFiles -> 8, 5, 0, 0 (9, 4, 0, 0; but a test is probably time dependent)
+   AllCombinations -> 72, 14, 0, 0
+   AllPairs -> 39, 9, 0, 0
+3. fit/file_runner.rb spec/parse.html spec/result_parse.html -- Everything must
+   pass
+4. fit/file_runner.rb spec/index.html spec/results_index.html -- parse.html
+   must pass, the other files are for future releases.
+
+*** Notes
+
+No examples/FitAcceptanceTests. Just run spec/FitSpecification.
+No fat/[FatTest.java, Frameworks.java, Tests.java] because they belong to
+the online FIT wiki.

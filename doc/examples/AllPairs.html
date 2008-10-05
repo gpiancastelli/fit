@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Wiki: All Pairs</title>
+<head>
+<body bgcolor=#FFFFFF link=#d06040 vlink=#806040>
+    <h1>All Pairs</h1>
+    <wiki>This is the third and final fixture of a suite that make up the AllPairsExample. Like with AllFiles, we expand wildcard characters in path specifications to get lists of tests. And, like in AllCombinations, we enumerate cases drawing from these lists one test at a time in sequence. But here our goal is only to test all possible pairs of test, which will require fewer cases.
+<p><hr>
+<p>Here is the same specification we used to test the CalculatorExample in AllCombinations. Try it using AllPairs.
+<p><a href="run.cgi">http:run.cgi</a>
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=2> eg.AllPairs </td></tr>
+<tr><td> doc/examples/AllPairs/magnitude/*.html </td><td>&nbsp;</td></tr>
+<tr><td> doc/examples/AllPairs/sign/*.html </td><td>&nbsp;</td></tr>
+<tr><td> doc/examples/AllPairs/function/*.html </td><td>&nbsp;</td></tr>
+</table>
+<p>To meet the "all pairs" requirement we need at least n X m cases, where n and m are the sizes of the two largest categories. That means with only two categories all combinations and all pairs are the same. The marvel of the all pairs algorithm is that it squeezes draws from additional categories into these same cases and possibly a few more.
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=2> fit.Summary </td></tr>
+</table>
+<p><hr>
+<p><strong>Implementation</strong>
+<p>The algorithm is largely JamesBach's from the source cited on the AllPairsExample page.  My implementation can be summarized as follows.
+<p><UL>
+<li> Fill test cases with tests drawn from a list of <em>most wanted</em> pairs.
+<li> Fill one case at a time. Never reexamine a case once filled.
+<li> Recirculate used pairs back to the list but as <em>less wanted</em>.
+<li> Quit filling cases when all pairs have been used at least once.
+<p></UL>
+The case currently being filled is called the <em>slug.</em> A pair will fit the slug only if the following hold.
+<p><UL>
+<li> At least one item of a pair is of a category that is not already filled.
+<li> The other item must match the slug in its category or must also be unfilled.
+<p></UL>
+The fixture uses these helper objects to represent the state of the algorithm.
+<p><UL>
+<li> Item -- A value from within a category.
+<li> Pair -- Two Items drawn from different categories.
+<li> Var -- A category, one per list of files.
+<p></UL>
+See the source.
+<p><UL>
+<li> <a href="Release/Source/eg/AllPairs.java">http:Release/Source/eg/AllPairs.java</a>
+<p></UL>
+See AllPairsAlgorithm for some tests we've written for this algorithm itself.
+</wiki>
+<hr>
+    Last edited November 9, 2002
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+$:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+
+require 'fit/parse'
+require 'fit/file_runner'
+
+report = ARGV[1]
+unless report.nil?
+  Fit::Parse.footnote_path = File.dirname(report) + File::SEPARATOR
+end
+Fit::FileRunner.new.run ARGV

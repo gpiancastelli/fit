@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title>Wiki: Web Page Example</title>
+<head>
+<body bgcolor=#FFFFFF link=#d06040 vlink=#806040>
+	<h1>Web Page Example</h1>
+	<wiki>We will look around the fit website.
+<p>Oops. This doesn't work yet because the java HTTP object doesn't seem to send along the Host field on a HTTP GET so c2.com's web server can route the request to the correct virtual server. Bummer.  
+<p><p><a href="run.cgi">http:run.cgi</a>
+<p>For now we look around Google instead.
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=3> fit.ActionFixture </td></tr>
+<tr><td> start </td><td> eg.Page </td><td>&nbsp;</td></tr>
+<tr><td> enter </td><td> location </td><td> <a href="//google.com">http://google.com</a> </td></tr>
+<tr><td> check </td><td> title </td><td> Google </td></tr>
+<tr><td> enter </td><td> link </td><td> Jobs </td></tr>
+<tr><td> check </td><td> title </td><td> About Google </td></tr>
+<tr><td> enter </td><td> link </td><td> Press </td></tr>
+<tr><td> enter </td><td> link </td><td> Review </td></tr>
+<tr><td> check </td><td> title </td><td> Google Press Room </td></tr> 
+</table>
+<p>Here is what this page is suppose to look like. 
+<p><UL>
+<li> <a href="files/WebPageExample/page.pdf">http:files/WebPageExample/page.pdf</a>
+<p></UL>
+See the source.
+<p><UL>
+<li> <a href="Release/Source/eg/Page.java">http:Release/Source/eg/Page.java</a>
+<p></UL>
+<hr>
+<p><em>Java gurus suggest that the problem is related to weak libraries in the kaffe implementation and that either sun or ibm jvm will make problems go away.</em>
+<p>Testing server side java ...
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=3> fit.ActionFixture </td></tr>
+<tr><td> start </td><td> eg.Page </td><td>&nbsp;</td></tr>
+<tr><td> enter </td><td> location </td><td> <a href="//fit.c2.com">http://fit.c2.com</a> </td></tr>
+<tr><td> check </td><td> title </td><td> Wiki: Welcome Visitors </td></tr>
+</table>
+<p><hr>
+<p>I wrote this example to help get WilkesJoiner and	JimWeaver started with our framework. They didn't seem to need it. While I'm still debuging they are distributing a similar fixture exploiting their jwebunit facade to HttpUnit. Nice work guys. -- WardCunningham
+<p><p><hr>
+<p>In this example we will use a fixture to look around the web. Developers of web applications often get the idea that this is a good universal interface to their programs. We don't think so. You are far better off testing your server site objects from fixturing running on the server. But you will probably want to do some testing over http so we show here how it can be done. 
+<p>You can run this test on the fit.c2.com server with the usual run.cgi command. This will have c2.com acting as a client on your behalf.
+<p><a href="run.cgi">http:run.cgi</a>
+<p>We use actions to start eg.Page, our web browser like fixture. We can enter location, a web address, or link, which follows a link on the page to a new location. When we enter a link, the fixture searches the current page for an anchor that starts with the entered text. You only have to enter enough to be unique. Then it retrieves that page.
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=3> fit.ActionFixture </td></tr>
+<tr><td> start </td><td> eg.Page </td><td>&nbsp;</td></tr>
+<tr><td> enter </td><td> location </td><td> <a href="//fit.c2.com">http://fit.c2.com</a> </td></tr>
+<tr><td> check </td><td> title </td><td> Wiki: Welcome Visitors </td></tr>
+<tr><td> enter </td><td> link </td><td> Example </td></tr>
+<tr><td> check </td><td> title </td><td> Wiki: Example Tests </td></tr>
+<tr><td> enter </td><td> link </td><td> Simple </td></tr>
+<tr><td> check </td><td> title </td><td> Wiki: Simple Example </td></tr>
+</table>
+<p>The eg.Page fixture is also a row fixture. Here we use it that way to check on the rows of the SimpleExample.
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=2> eg.Page </td></tr>
+<tr><td> numerator() </td><td> denominator() </td></tr> 
+<tr><td> 1000 </td><td> 10 </td></tr> 
+<tr><td> 1000 </td><td> 7 </td></tr>
+<tr><td> 1000 </td><td> 0 </td></tr>
+<tr><td> 1000 </td><td> .001 </td></tr>
+<tr><td> -1000 </td><td> 10 </td></tr>
+<tr><td> 0 </td><td> 0 </td></tr>
+</table>
+<p>We left out the pentium bug values on purpose just so you would know we really are reading from that page. We will follow the pentium bug reference just to show that we can read from other servers.
+<p><table BORDER CELLSPACING=0 CELLPADDING=3>
+<tr><td ColSpan=3> fit.ActionFixture </td></tr>
+<tr><td> enter </td><td> link </td><td> <a href="//www.cs.earlham">http://www.cs.earlham</a> </td></tr>
+<tr><td> check </td><td> title </td><td> Bugs in the Intel Microprocessors </td></tr>
+<tr><td> enter </td><td> link </td><td> Main </td></tr>
+<tr><td> enter </td><td> link </td><td> Dusko </td></tr>
+<tr><td> enter </td><td> link </td><td> web </td></tr>
+<tr><td> check </td><td> title </td><td> WebDB - Version 3.1 </td></tr>
+</table>
+<p>There are a couple of things that are not quite right about this example. 
+<p><UL>
+<li> It seems odd to say | enter | link | foo | when we want to click a link. The reflection that ActionFixture is doing for us isn't really helping us out much. 
+<p><li> Our fixture only knows one query and that assumes we are on a page with a very specific table. 
+<p></UL>
+See source.
+<p><UL>
+<li> <a href="Release/Source/eg/Page.java">http:Release/Source/eg/Page.java</a>
+<p><p><p></UL>
+<hr>
+<p>It would be neat to see some tests of an XML interface. Google has one.</wiki>
+<hr>
+	Last edited November 13, 2002
+</body>
+</html>
+

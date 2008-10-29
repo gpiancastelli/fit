@@ -72,7 +72,7 @@ module Fit
       assert_equal 1, @f.sample_array[0]
       assert_equal 2, @f.sample_array[1]
       assert_equal 3, @f.sample_array[2]
-      assert_equal '123', adapter.to_s(@f.sample_array)
+      assert_equal '1, 2, 3', adapter.to_s(@f.sample_array)
       assert_equal [1,2,3], @f.sample_array
     end
     def test_boolean

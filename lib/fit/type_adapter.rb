@@ -59,7 +59,12 @@ module Fit
     end
 
     def to_s target
-      target.to_s
+      case target
+      when Array
+        target.join(", ")
+      else
+        target.to_s
+      end
     end
 
   end

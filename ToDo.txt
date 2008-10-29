@@ -1,6 +1,5 @@
 *** TODOs
 
-- A better Array string representation in TypeAdapter#to_s(value).
 - Better comment the reflection code in Fit::Fixture.
 - TypeAdapter#invoke and IllegalAccessException in Fixture#check.
 - Fit::TypeAdapter#on vs. Fit::TypeAdapter#for.
@@ -8,7 +7,7 @@
   at 0, 0, 0, 0; missings are at 1, surpluses are at 1.
 - Parsing of new types: MyClass#parse? See BusinessObject in RowFixtureTest.
 
-
+DONE A better Array string representation in TypeAdapter#to_s(value).
 DONE Fix paths in Fit::Parse#footnote and directory structure for RubyGems and
      tests.
 DONE A command line script to process HTML files, e.g. fit.rb in.html out.html

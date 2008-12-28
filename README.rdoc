@@ -12,7 +12,7 @@ License:: RubyFIT is Copyright 2004-2006 by Giulio Piancastelli.
           General Public License version 2 or later.
 
 Document created on Saturday 11th December, 2004.
-Last revised on Saturday 20th May, 2006.
+Last revised on Sunday 28th December, 2008.
 
 == Quick Start
 
@@ -196,6 +196,7 @@ Other developers have contributed code to the project:
 - Jim Hughes
 - Brian Marick
 - Bret Pettichord
+- Jari Bakken
 
 === Special Thanks
 

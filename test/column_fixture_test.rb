@@ -10,17 +10,15 @@ module Fit
 
   class ColumnFixtureTest < Test::Unit::TestCase
 
-    # part of RubyForge bug #22283
+    # RubyForge bug #22283
     def test_camel
       fixture = TestColumnFixture.new
       header_text = "Execution Data Value"
-      assert_equal "execution_data_value", fixture.camel(header_text, '')
+      assert_equal "execution_data_value", fixture.camel(header_text)
     end
 
     class TestColumnFixture < ColumnFixture
-      def camel name, suffix
-        super name, suffix
-      end
+      public :camel
     end
 
   end

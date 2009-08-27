@@ -197,6 +197,7 @@ Other developers have contributed code to the project:
 - Brian Marick
 - Bret Pettichord
 - Jari Bakken
+- Zhon Johansen
 
 === Special Thanks
 

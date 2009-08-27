@@ -98,7 +98,7 @@ spec = Gem::Specification.new do |s|
   s.executables << 'fit'
   s.test_file = 'test/all_tests.rb'
   s.has_rdoc = false # no RDoc comments in the code
-  s.extra_rdoc_files = ["README.txt"]
+  s.extra_rdoc_files = ["README.rdoc"]
   # no external dependencies on other gems
 end
 

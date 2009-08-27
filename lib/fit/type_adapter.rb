@@ -83,7 +83,7 @@ module Fit
         return result unless result.nil?
       end
       return Integer(value) if value =~ /^-?\d+$/
-      return Float(value) if (value =~ /^-?\d*\.\d*$/ || value =~ /^-?\d*\.\d*[e|E]\d+$/)
+      return Float(value) if value =~ /^[+-]?\d*\.\d+([eE][+-]?\d+)?$/
       elements = value.split(',')
       unless elements.size == 1
         array = []

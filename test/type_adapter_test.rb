@@ -66,6 +66,13 @@ module Fit
       adapter.set(adapter.parse('6.02e23'))
       assert_in_delta 6.02e23, @f.sample_float, 1e17
     end
+    def test_bad_float
+      ['.', '3.', '.|0'].each do |bad_float|
+        adapter = TypeAdapter.for @f, 'sample_float', false
+        adapter.set(adapter.parse(bad_float))
+        assert_equal bad_float, @f.sample_float
+      end
+    end
     def test_array
       adapter = TypeAdapter.for @f, 'sample_array', false
       adapter.set(adapter.parse('1, 2, 3'))
@@ -79,42 +86,42 @@ module Fit
       verify_sample_boolean_adapter_setter @f, 'sample_boolean'
     end
     def verify_sample_boolean_adapter_setter(fixture,method)
-       adapter = TypeAdapter.for fixture, method, false
-       adapter.set(adapter.parse('true'))
-       assert fixture.sample_boolean
-       adapter.set(adapter.parse('false'))
-       assert !fixture.sample_boolean
+      adapter = TypeAdapter.for fixture, method, false
+      adapter.set(adapter.parse('true'))
+      assert fixture.sample_boolean
+      adapter.set(adapter.parse('false'))
+      assert !fixture.sample_boolean
     end
-      def test_digits_in_the_name
-         adapter = TypeAdapter.for @f, "sample_with_2_digits1", false
-         adapter.set(adapter.parse('true'))
-         assert @f.sample_with_2_digits1
-         adapter.set(adapter.parse('false'))
-         assert !@f.sample_with_2_digits1
+    def test_digits_in_the_name
+      adapter = TypeAdapter.for @f, "sample_with_2_digits1", false
+      adapter.set(adapter.parse('true'))
+      assert @f.sample_with_2_digits1
+      adapter.set(adapter.parse('false'))
+      assert !@f.sample_with_2_digits1
+    end
+    def test_graceful_names_setters
+      ['SampleBoolean','Sample Boolean','sample boolean','sample? boolean','sample, boolean','sample, boolean?'].each do |name|
+         verify_sample_boolean_adapter_setter @f, name
       end
-      def test_graceful_names_setters
-         ['SampleBoolean','Sample Boolean','sample boolean','sample? boolean','sample, boolean','sample, boolean?'].each do |name|
-            verify_sample_boolean_adapter_setter @f, name
-         end
+    end
+    def test_graceful_names_getters
+      ['sample boolean()','sample_boolean()','Sample Boolean()','SampleBoolean()',
+       'sample boolean?','sample_boolean?','Sample Boolean?','SampleBoolean?','Sample.boolean'].each do |name|
+         adapter = TypeAdapter.for @f, name
+         [true, false].each { |v| @f.sample_boolean = v; assert_equal(v, adapter.get) }
       end
-      def test_graceful_names_getters
-         ['sample boolean()','sample_boolean()','Sample Boolean()','SampleBoolean()',
-         'sample boolean?','sample_boolean?','Sample Boolean?','SampleBoolean?','Sample.boolean'].each do |name|
-            adapter=TypeAdapter.for @f, name
-            [true,false].each { |v| @f.sample_boolean=v; assert_equal(v,adapter.get) }
-         end
-      end
-      def test_getters_ending_with_question_mark
-         # when the request ends in ?, prefer a method ending in ?
-         adapter = TypeAdapter.for @f, "might_end_in_qm?"
-         assert adapter.get
-         # when the request doesn't end in ?, require a method not ending with ?
-         adapter = TypeAdapter.for @f, "might_end_in_qm"
-         assert ! adapter.get
-         # when the request ends in ? accept a method not ending in ?, if one ending in ? is not present
-         @f.sample_string='no qm'
-         adapter = TypeAdapter.for @f, "sample_string?"
-         assert_equal 'no qm',adapter.get
-      end
+    end
+    def test_getters_ending_with_question_mark
+      # when the request ends in ?, prefer a method ending in ?
+      adapter = TypeAdapter.for @f, "might_end_in_qm?"
+      assert adapter.get
+      # when the request doesn't end in ?, require a method not ending with ?
+      adapter = TypeAdapter.for @f, "might_end_in_qm"
+      assert ! adapter.get
+      # when the request ends in ? accept a method not ending in ?, if one ending in ? is not present
+      @f.sample_string = 'no qm'
+      adapter = TypeAdapter.for @f, "sample_string?"
+      assert_equal 'no qm', adapter.get
+    end
   end
 end

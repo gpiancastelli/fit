@@ -9,9 +9,11 @@ module Fit
     
     def find_fixture_class name
       camelizedName = (name.split(/[^a-zA-Z0-9.:$]/).collect { |word| first = word.slice!(0,1).upcase; first + word }).join.chomp('.')
-      klass = ([camelizedName, camelizedName + 'Fixture'].collect { |n| find_class n }).find { |fixtureKlass| fixtureKlass }
-      raise "Fixture #{name} not found." unless klass
-      raise "#{name} is not a fixture." unless klass < Fixture
+      klasses = ([camelizedName, camelizedName + 'Fixture'].collect { |n| find_class(n) }).compact
+      klass = klasses.find { |k| k < Fixture }
+      
+      raise "Fixture #{name} not found." if klasses.length == 0
+      raise "#{name} is not a fixture." unless klass
       klass
     end
     

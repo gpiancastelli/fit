@@ -13,6 +13,11 @@ require 'eg/all_files'
 require 'eg/nested/bob_the_builder_fixture'
 require 'eg/music/browser'
 
+
+class A; end
+class AFixture < Fit::Fixture; end
+
+
 module Fit
   class FixtureLoaderTest < Test::Unit::TestCase
     def setup
@@ -66,6 +71,9 @@ module Fit
       flunk("Should have thrown.")
     rescue StandardError => e
       assert_equal("String is not a fixture.", e.to_s)
+    end
+    def test_loading_fixture_when_fixture_name_is_same_as_another_class_name
+      assert_instance_of(AFixture, @loader.load('A'))
     end
   end
 end

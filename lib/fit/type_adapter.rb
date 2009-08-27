@@ -82,8 +82,8 @@ module Fit
         result = @fixture.parse value, @type
         return result unless result.nil?
       end
-      return Integer(value) if value =~ /^-?\d+$/
-      return Float(value) if value =~ /^[+-]?\d*\.\d+([eE][+-]?\d+)?$/
+      return Integer(value) if value =~ /\A-?\d+\Z/
+      return Float(value) if value =~ /\A[+-]?\d*\.\d+([eE][+-]?\d+)?\Z/
       elements = value.split(',')
       unless elements.size == 1
         array = []

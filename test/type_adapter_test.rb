@@ -51,16 +51,6 @@ module Fit
       adapter = TypeAdapter.for @f, 'sample_integer', false
       assert_equal '-234567', adapter.parse('-234567').to_s
     end
-    def test_method
-      adapter = TypeAdapter.for @f, 'pi', true
-      assert_in_delta 3.14159, adapter.get, 0.00001
-      assert_equal 3.14159265, adapter.get
-    end
-    def test_string
-      adapter = TypeAdapter.for @f, 'sample_string', false
-      adapter.set(adapter.parse('xyzzy'))
-      assert_equal 'xyzzy', @f.sample_string
-    end
     def test_double
       adapter = TypeAdapter.for @f, 'sample_float', false
       adapter.set(adapter.parse('6.02e23'))
@@ -72,6 +62,23 @@ module Fit
         adapter.set(adapter.parse(bad_float))
         assert_equal bad_float, @f.sample_float
       end
+    end
+    def test_string
+      adapter = TypeAdapter.for @f, 'sample_string', false
+      adapter.set(adapter.parse('xyzzy'))
+      assert_equal 'xyzzy', @f.sample_string
+    end
+    def test_multiline_string_with_numbers
+      ["foo\n1", "foo\n1.0"].each do |s|
+        adapter = TypeAdapter.for @f, 'sample_string', false
+        adapter.set(adapter.parse(s))
+        assert_equal s, @f.sample_string
+      end
+    end
+    def test_method
+      adapter = TypeAdapter.for @f, 'pi', true
+      assert_in_delta 3.14159, adapter.get, 0.00001
+      assert_equal 3.14159265, adapter.get
     end
     def test_array
       adapter = TypeAdapter.for @f, 'sample_array', false

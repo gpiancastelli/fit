@@ -60,13 +60,14 @@ module Fit
     @@metadata = {}
     def Fixture.metadata; @@metadata; end
 
+    @@loader = FixtureLoader.new
+
     attr_accessor :summary, :counts, :listener, :args
 
     def initialize
       @summary = {}
       @counts = Counts.new
       @listener = FixtureListener.new
-      @loader = FixtureLoader.new
       @args = []
     end
 
@@ -77,7 +78,7 @@ module Fit
     # Traversal
 
     def find_class class_name
-      @loader.find_fixture_class class_name
+      @@loader.find_fixture_class class_name
     end
     
     def do_tables tables

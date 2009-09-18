@@ -74,6 +74,15 @@ Rake::FitTask.new(:fitbook) do |t|
   end
 end
 
+Rake::FitTask.new(:fitbugs) do |t|
+  t.create_test_suite do |suite|
+    suite.test_path = "doc/bugs/"
+    suite.report_path = "doc/bugs/"
+    suite << { :name => 'ColumnFixtureFollowedByActionFixture',
+               :right => 8, :wrong => 1, :ignores => 0, :exceptions => 0 }
+  end
+end
+
 Rake::FitTask.new(:fitspec) do |t|
   t.create_test_suite do |suite|
     suite.test_path = "doc/spec/"

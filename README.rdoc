@@ -128,7 +128,7 @@ difference is retained. A workaround in Fit::ScientificDouble has been
 implemented, so that if the precision is exactly zero, the values of
 two comparing objects must be equals in a 1.0e-5 delta.
 
-Note than in <tt>AllCombinations.html</tt> Ruby does even
+Note that in <tt>AllCombinations.html</tt> Ruby does even
 ScientificDouble with much more precision than the Java version. So,
 another workaround in <tt>==</tt> and <tt><=></tt> had to be employed,
 specifically to create another ScientificDouble to compare with and to

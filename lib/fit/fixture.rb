@@ -92,6 +92,7 @@ module Fit
             fixture.interpret_tables tables
           rescue Exception => e
             exception fixture_name, e
+            @listener.table_finished(tables)
             interpret_following_tables tables
           end
         end

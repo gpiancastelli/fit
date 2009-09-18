@@ -53,6 +53,27 @@ Rake::FitTask.new(:fit) do |t|
   
 end
 
+# desc 'Run tests from the book "Fit for developing software" by R.Mugridge & W.Cunningham'
+Rake::FitTask.new(:fitbook) do |t|
+  # Examples from the book "Fit for developing software" by R.Mugridge & W.Cunningham
+  t.create_test_suite do |suite|
+    tests = []
+    tests << { :name => 'TestDiscount',
+               :right => 7, :wrong => 1, :ignores => 0, :exceptions => 0 }
+    tests << { :name => 'TestDiscountMoney',
+               :right => 7, :wrong => 1, :ignores => 0, :exceptions => 0 }
+    tests << { :name => 'TestChatServer' }
+    tests << { :name => 'TestDiscountGroup' }
+    tests << { :name => 'TestLateHours' }
+    suite.test_path = "doc/book/"
+    suite.report_path = "doc/book/"
+    suite.tests = tests
+
+    CLOBBER.include(suite.report_path + "Report_*.html")
+    CLOBBER.include(suite.report_path + "footnotes/")
+  end
+end
+
 Rake::FitTask.new(:fitspec) do |t|
   t.create_test_suite do |suite|
     suite.test_path = "doc/spec/"

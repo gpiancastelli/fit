@@ -47,7 +47,7 @@ module Fit
     end 
     def test_it_finds_fixtures_in_the_fit_module
       assert_instance_of(Fit::ImportFixture, @loader.load('ImportFixture'))
-    end        
+    end
     def test_it_adds_fixture_to_the_end_if_it_cant_find_the_class
       assert_instance_of(Fit::ImportFixture, @loader.load('Import'))
     end
@@ -60,6 +60,11 @@ module Fit
       FixtureLoader.add_fixture_package('Eg::Nested')
       assert_instance_of(Eg::Nested::BobTheBuilderFixture, @loader.load('bob_the!-builder,fixture.'))
       assert_instance_of(Eg::Nested::BobTheBuilderFixture, @loader.load('bob_the!-builder.'))
+    end
+    def test_import_packages_are_unique
+       FixtureLoader.add_fixture_package('Eg::Nested')
+       FixtureLoader.add_fixture_package('Eg::Nested')
+       assert_equal(1, FixtureLoader.fixture_packages.find_all { |e| e =~ /^Eg::Nested/}.size)
     end
     def test_it_raises_when_it_cant_find_the_fixture
       @loader.load "NoSuchClass"

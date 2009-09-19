@@ -51,12 +51,12 @@ module Fit
     def test_it_adds_fixture_to_the_end_if_it_cant_find_the_class
       assert_instance_of(Fit::ImportFixture, @loader.load('Import'))
     end
-    def test_it_camalizes_seperated_words
+    def test_it_camelizes_separated_words
       FixtureLoader.add_fixture_package('Eg::Nested')
       assert_instance_of(Eg::Nested::BobTheBuilderFixture, @loader.load('bob the builder fixture'))
       assert_instance_of(Eg::Nested::BobTheBuilderFixture, @loader.load('bob the builder'))
     end
-    def test_punctuation_seperates_words
+    def test_punctuation_separates_words
       FixtureLoader.add_fixture_package('Eg::Nested')
       assert_instance_of(Eg::Nested::BobTheBuilderFixture, @loader.load('bob_the!-builder,fixture.'))
       assert_instance_of(Eg::Nested::BobTheBuilderFixture, @loader.load('bob_the!-builder.'))

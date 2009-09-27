@@ -1,3 +1,4 @@
+# -*- coding: iso-8859-1 -*-
 # Copyright (c) 2002 Cunningham & Cunningham, Inc.
 # Released under the terms of the GNU General Public License version 2 or later.
 
@@ -87,6 +88,20 @@ module Fit
       assert_equal '&amp;&amp;', Parse.unescape('&amp;amp;&amp;amp;')
       assert_equal 'a>b & b>c &&', Parse.unescape('a&gt;b&nbsp;&amp;&nbsp;b>c &&')
       assert_equal "'\"\"'", Parse.unescape("\221“”\222")
+      assert_equal 'no-entity', Parse.unescape('no-entity')
+    end
+    def test_unescape_numeric_entities
+      assert_equal 'A', Parse.unescape('&#65;')
+      assert_equal 'A', Parse.unescape('&#x41;')
+      assert_equal 'A', Parse.unescape('&#X41;')
+      assert_equal '!A!', Parse.unescape('!&#65;!')
+      assert_equal 'AB', Parse.unescape('&#65;&#66;')
+      assert_equal '1A2B3', Parse.unescape('1&#65;2&#66;3')
+      assert_equal '&#65', Parse.unescape('&#65')
+      assert_equal '&#foo;', Parse.unescape('&#foo;')
+      assert_equal '1&#foo;2', Parse.unescape('1&#foo;2')
+      assert_equal "\357\277\277", Parse.unescape('&#65535;')
+      assert_equal '&#65536;', Parse.unescape('&#65536;')
     end
     def test_whitespace_is_condensed
       assert_equal 'a b', Parse.condense_whitespace(' a  b  ')

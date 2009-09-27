@@ -165,11 +165,40 @@ module Fit
     end
 
     def Parse.unescape s
-      str = s.gsub %r{<br />}, "\n"
+      str = Parse.unescape_numeric_entities s
+      str = str.gsub %r{<br />}, "\n"
       # unescape HTML entities
       str = str.gsub(%r{&lt;}, '<').gsub(%r{&gt;}, '>').gsub(%r{&nbsp;}, ' ').gsub(%r{&quot;}, '"').gsub(%r{&amp;}, '&')
       # unescape smart quotes
       str.gsub(/\223/, '"').gsub(/\224/, '"').gsub(/\221/, "'").gsub(/\222/, "'")
+    end
+
+    def Parse.unescape_numeric_entities s
+      result = ''
+      last_start = 0
+      starts_at = s.index '&#'
+      while not starts_at.nil?
+        ends_at = s.index ';', starts_at
+        if ends_at.nil?
+          starts_at = s.index('&#', starts_at + 1)
+          next
+        end
+        begin
+          entity = s[(starts_at + 2)...ends_at]
+          entity = '0x' + entity[1..-1] if (entity =~ /^x/ or entity =~ /^X/)
+          char = Integer(entity)
+          #char = (entity =~ /^x/ or entity =~ /^X/) ? entity[1..-1].to_i(16) : entity.to_i
+          if char <= 0xFFFF
+            result += s[last_start...starts_at] + [char].pack('U')
+            last_start = ends_at + 1
+          end
+        rescue ArgumentError
+          # just loop around again
+        ensure
+          starts_at = s.index '&#', ends_at
+        end
+      end
+      result += s[last_start..-1]
     end
 
     def Parse.condense_whitespace s

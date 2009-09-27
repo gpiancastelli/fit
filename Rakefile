@@ -88,7 +88,7 @@ Rake::FitTask.new(:fitspec) do |t|
     suite.test_path = "doc/spec/"
     suite.report_path = "doc/spec/"
     suite << { :name => 'parse',
-               :right => 70, :wrong => 0, :ignores => 0, :exceptions => 0 }
+               :right => 83, :wrong => 0, :ignores => 0, :exceptions => 0 }
     suite << { :name => 'annotation',
                :right => 47, :wrong => 0, :ignores => 0, :exceptions => 0 }
   end

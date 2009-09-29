@@ -1,0 +1,1537 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="ui_files/filelist.xml">
+<title>Fit Specification: User Interface</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>James Shore</o:Author>
+  <o:LastAuthor>James Shore</o:LastAuthor>
+  <o:Revision>28</o:Revision>
+  <o:TotalTime>224</o:TotalTime>
+  <o:Created>2008-01-26T04:25:00Z</o:Created>
+  <o:LastSaved>2008-01-29T06:50:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1180</o:Words>
+  <o:Characters>6731</o:Characters>
+  <o:Company>Titanium I.T. LLC</o:Company>
+  <o:Lines>56</o:Lines>
+  <o:Paragraphs>15</o:Paragraphs>
+  <o:CharactersWithSpaces>7896</o:CharactersWithSpaces>
+  <o:Version>10.6830</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:1 135135232 16 0 262144 0;}
+@font-face
+	{font-family:Mangal;
+	panose-1:0 0 4 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:32771 0 0 0 1 0;}
+@font-face
+	{font-family:"\@SimSun";
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Mangal;
+	font-weight:bold;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Mangal;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Mangal;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:Mangal;
+	font-variant:small-caps;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:Mangal;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;
+	mso-bidi-font-family:Mangal;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:28338220;
+	mso-list-template-ids:1695050738;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:301933661;
+	mso-list-template-ids:-784945588;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:405300792;
+	mso-list-template-ids:-2035248914;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:1199583897;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2139709852 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-start-at:151;
+	mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:1340693363;
+	mso-list-template-ids:1185865916;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1><span style='mso-bidi-font-family:"Times New Roman"'><a href="index.html">Fit
+Specification</a>: User Interface<o:p></o:p></span></h1>
+
+<p><span style='mso-bidi-font-family:"Times New Roman"'>&nbsp;<o:p></o:p></span></p>
+
+<p><span style='mso-bidi-font-family:"Times New Roman"'>This portion of the Fit
+specification describes Fit’s user interface.<o:p></o:p></span></p>
+
+<p><span style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p><b><u><span style='mso-bidi-font-family:"Times New Roman"'>Contents:<o:p></o:p></span></u></b></p>
+
+<p><span style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><!--[if supportFields]><b><span
+style='mso-bidi-font-family:"Times New Roman";text-transform:uppercase'><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>TOC \o &quot;2-3&quot; \h \z \u <span
+style='mso-element:field-separator'></span></span></b><![endif]--><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc189305499">User
+Interface Possibilities<span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1 dotted'>. </span></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span> PAGEREF _Toc189305499 \h </span><span
+style='color:windowtext;text-decoration:none;text-underline:none'><span
+style='display:none;mso-hide:screen'><span style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100380039003300300035003400390039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc189305500"><span
+style='background:yellow;mso-highlight:yellow'>Non-Standard Features and
+Fixtures</span><span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc189305500 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100380039003300300035003500300030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc189305501">Recommended
+Command-Line Interface<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc189305501 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100380039003300300035003500300031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc189305502"><span
+style='background:yellow;mso-highlight:yellow'>Options</span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc189305502 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100380039003300300035003500300032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";font-style:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc189305503"><span
+style='background:yellow;mso-highlight:yellow'>Option Positioning</span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc189305503 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100380039003300300035003500300033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";font-style:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc189305504">Error
+Codes<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc189305504 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100380039003300300035003500300034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";font-style:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc189305505"><span
+style='background:yellow;mso-highlight:yellow'>Error Messages</span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc189305505 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100380039003300300035003500300035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";font-style:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc189305506">Run
+Results<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc189305506 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100380039003300300035003500300036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p><!--[if supportFields]><b><span style='font-size:10.0pt;mso-bidi-font-size:
+12.0pt;mso-bidi-font-family:"Times New Roman";text-transform:uppercase'><span
+style='mso-element:field-end'></span></span></b><![endif]--><span
+style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<p><span style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc189305499"><span style='mso-bidi-font-family:"Times New Roman"'>User
+Interface Possibilities</span></a><span style='mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Fit implementations may provide any user interface they
+wish.<span style='mso-spacerun:yes'>  </span>Examples include command-line,
+GUI, and web-based interfaces.<span style='mso-spacerun:yes'> 
+</span>Implementers are encouraged to provide a standard command-line
+interface, described below.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc189305500"><span style='mso-bidi-font-family:"Times New Roman";
+background:yellow;mso-highlight:yellow'>Non-Standard Features and Fixtures</span></a><span
+style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+yellow'><o:p></o:p></span></h2>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>If an
+implementation provides features that are not described in this specification, <i
+style='mso-bidi-font-style:normal'>and</i> if the use of those features results
+in Fit documents that cannot be read by other compliant Fit implementations,
+those features are called “non-standard features” and must be disabled by
+default.<span style='mso-spacerun:yes'>  </span>The user must explicitly
+request non-standard features in order to enable them.<span
+style='mso-spacerun:yes'>  </span>When enabled, the user interface must display
+a clear message to the user that using non-standard features will prevent the
+user’s Fit documents from working with other Fit implementations.<span
+style='mso-spacerun:yes'>  </span>Examples of non-standard features include:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'><span
+     style='background:yellow;mso-highlight:yellow'>A change to <span
+     class=SpellE>ColumnFixture</span> that allows users to use spaces or
+     arbitrary symbols in column headers<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'><span
+     style='background:yellow;mso-highlight:yellow'>An enhancement that allows
+     users to create non-HTML documents<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'><span
+     style='background:yellow;mso-highlight:yellow'>A feature that parses
+     graphics embedded in Fit documents<o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>Features
+that do <i style='mso-bidi-font-style:normal'>not</i> affect how users create
+Fit documents need not be disabled and do not require a warning.<span
+style='mso-spacerun:yes'>  </span>Examples include:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'><span
+     style='background:yellow;mso-highlight:yellow'>A change that makes
+     creating fixtures easier<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'><span
+     style='background:yellow;mso-highlight:yellow'>An interactive editor that
+     creates Fit tables automatically from fixtures<o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'><span
+     style='background:yellow;mso-highlight:yellow'>An enhanced reporting mode
+     that links all Fit results into a single nicely-formatted report<o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>If an
+implementation bundles fixtures that are not described in this specification,
+those fixtures must be inaccessible by default.<span style='mso-spacerun:yes'> 
+</span>The user must explicitly enable them using whatever mechanism they use
+to tell that Fit implementation about their own fixtures.<span
+style='mso-spacerun:yes'>  </span>The fixtures must clearly be documented as
+being non-standard and users warned that they will have to re-create the
+fixtures in order to use their Fit documents with other Fit
+implementations.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>The
+purpose of these requirements is to ensure that users may use their Fit
+documents to guide porting and rewrite efforts.<span style='mso-spacerun:yes'> 
+</span>An application’s Fit documents provide long-term value that transcends
+any one implementation.<span style='mso-spacerun:yes'>  </span>Disabling
+non-standard behavior by default helps prevent users from accidentally creating
+incompatible Fit documents.</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc189305501"><span style='mso-bidi-font-family:"Times New Roman"'>Recommended
+Command-Line Interface</span></a><span style='mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Fit implementations that provide a command-line interface
+should (but are not required to) provide the following interface:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-family:"Courier New"'>fit</span></span><span
+style='font-family:"Courier New"'> <i style='mso-bidi-font-style:normal'><span
+style='background:yellow;mso-highlight:yellow'>[options]</span></i> <i
+style='mso-bidi-font-style:normal'>input-file output-file<o:p></o:p></i></span></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></i></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'><i
+     style='mso-bidi-font-style:normal'>Input-file</i> is the HTML file Fit
+     will read.</li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'><i
+     style='mso-bidi-font-style:normal'>Output-file</i> is the name of the file
+     Fit will create.<span style='mso-spacerun:yes'>  </span>If it already exists,
+     it is overwritten.</li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'><i
+     style='mso-bidi-font-style:normal'><span style='background:yellow;
+     mso-highlight:yellow'>Options</span></i><span style='background:yellow;
+     mso-highlight:yellow'> are described below.<o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Here is an example:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.8pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><span style='mso-bidi-font-family:"Times New Roman";
+  color:silver'>fat.CommandLineFixture</span></span><span style='mso-bidi-font-family:
+  "Times New Roman";color:silver'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b style='mso-bidi-font-weight:normal'><span
+  style='mso-bidi-font-family:"Times New Roman"'>CommandLine</span></b></span><b
+  style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman"'>InputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman"'>()<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman"'>OutputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman"'>()<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New"'>infile.html outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman"'>infile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman"'>outfile.html<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The input file must come before the output file, and both
+must be present.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.8pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><span style='mso-bidi-font-family:"Times New Roman";
+  color:silver'>fat.CommandLineFixture</span></span><span style='mso-bidi-font-family:
+  "Times New Roman";color:silver'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b style='mso-bidi-font-weight:normal'><span
+  style='mso-bidi-font-family:"Times New Roman"'>CommandLine</span></b></span><b
+  style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman"'>InputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman"'>()<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman"'>OutputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman"'>()<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New"'>outfile.html infile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman"'>outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman"'>infile.html<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New"'>infile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman"'>error<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman"'>error<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Spaces, quotes, and other non-alphanumeric characters are
+handled in implementation-specific ways.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc189305502"><span style='background:yellow;mso-highlight:yellow'>Options</span></a><span
+style='background:yellow;mso-highlight:yellow'><o:p></o:p></span></h3>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>The
+command-line should also take at least three options, as follows.<span
+style='mso-spacerun:yes'>  </span>Implementations that support options other
+than described here are encouraged to follow the GNU standard, described at <a
+href="http://www.gnu.org/prep/standards/standards.html#Command_002dLine-Interfaces">http://www.gnu.org/prep/standards/standards.html#Command_002dLine-Interfaces</a>.</span><i
+style='mso-bidi-font-style:normal'><o:p></o:p></i></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='background:yellow;mso-highlight:yellow'>--encoding=<span class=SpellE><i
+style='mso-bidi-font-style:normal'>charset</i></span><i style='mso-bidi-font-style:
+normal'><o:p></o:p></i></span></b></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><i style='mso-bidi-font-style:normal'><span
+style='background:yellow;mso-highlight:yellow'>Charset</span></i></span><span
+style='background:yellow;mso-highlight:yellow'> is the character set (such as
+UTF-8) used to decode <i style='mso-bidi-font-style:normal'>input-file</i> and
+create <i style='mso-bidi-font-style:normal'>output-file</i>.<span
+style='mso-spacerun:yes'>  </span>Legal values for <span class=SpellE><i
+style='mso-bidi-font-style:normal'>charset</i></span> are
+implementation-specific.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.8pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><span style='mso-bidi-font-family:"Times New Roman";
+  color:silver;background:yellow;mso-highlight:yellow'>fat.CommandLineFixture</span></span><span
+  style='mso-bidi-font-family:"Times New Roman";color:silver;background:yellow;
+  mso-highlight:yellow'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b style='mso-bidi-font-weight:normal'><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>CommandLine</span></b></span><b style='mso-bidi-font-weight:normal'><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman";
+  background:yellow;mso-highlight:yellow'>InputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>()<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman";
+  background:yellow;mso-highlight:yellow'>OutputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>()<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><b><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>Encoding()</span></b><span style='mso-bidi-font-family:
+  "Times New Roman";background:yellow;mso-highlight:yellow'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New";background:yellow;mso-highlight:
+  yellow'>--encoding=utf8 infile.html outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>infile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>utf8<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>The
+“encoding” parameter is optional.<span style='mso-spacerun:yes'>  </span>If it
+is left out, the character set will be decided in some implementation-specific
+way.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.8pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><span style='mso-bidi-font-family:"Times New Roman";
+  color:silver;background:yellow;mso-highlight:yellow'>fat.CommandLineFixture</span></span><span
+  style='mso-bidi-font-family:"Times New Roman";color:silver;background:yellow;
+  mso-highlight:yellow'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b style='mso-bidi-font-weight:normal'><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>CommandLine</span></b></span><b style='mso-bidi-font-weight:normal'><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman";
+  background:yellow;mso-highlight:yellow'>InputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>()<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman";
+  background:yellow;mso-highlight:yellow'>OutputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>()<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><b><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>Encoding()</span></b><span style='mso-bidi-font-family:
+  "Times New Roman";background:yellow;mso-highlight:yellow'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New";background:yellow;mso-highlight:
+  yellow'>infile.html outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>infile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>Implementation-specific<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='background:yellow;mso-highlight:yellow'>--version</span></b><span
+style='background:yellow;mso-highlight:yellow'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>Fit
+implementations should print their name, version, origin, and legal status as
+described in <a
+href="http://www.gnu.org/prep/standards/standards.html#Command_002dLine-Interfaces.">the
+GNU standard</a>.<span style='mso-spacerun:yes'>  </span><i style='mso-bidi-font-style:
+normal'>In addition</i> to providing the canonical name of the Fit
+implementation, it should also provide the version of the Fit specification
+that it adheres to.<span style='mso-spacerun:yes'>  </span>For example:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'>Fit for <span class=SpellE>Befunge</span>
+v2.42.1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'>Conforms to Fit Specification v1.2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'>Copyright (C) 2008 Cunningham &amp;
+Cunningham, Inc.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'>License GPLv2+: GNU GPL version 2 or
+later<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'>This is free software: you are free to
+change and redistribute it.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'>There is NO WARRANTY, to the extent
+permitted by law.</span><span style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>(Note
+that the correct spelling of Fit is “Fit,” not “FIT.”)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>Implementations
+should exit without performing any other action when the --version option is
+encountered.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='background:yellow;mso-highlight:yellow'>--help</span></b><span
+style='background:yellow;mso-highlight:yellow'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>Fit
+implementations should print brief documentation for how to invoke the program
+as described in <a
+href="http://www.gnu.org/prep/standards/standards.html#Command_002dLine-Interfaces.">the
+GNU standard</a>.<span style='mso-spacerun:yes'>  </span>For example:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=GramE><span
+style='font-family:"Courier New";background:yellow;mso-highlight:yellow'>usage</span></span><span
+style='font-family:"Courier New";background:yellow;mso-highlight:yellow'>: fit
+[options] <span class=SpellE>infile</span> <span class=SpellE>outfile</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'>Options<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'><span
+style='mso-spacerun:yes'> </span>--encoding=CHARSET<span
+style='mso-spacerun:yes'>    </span>read and write files using specified character
+set<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'><span
+style='mso-spacerun:yes'> </span>--version<span
+style='mso-spacerun:yes'>             </span>print version number<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'><span
+style='mso-spacerun:yes'> </span>--help<span
+style='mso-spacerun:yes'>                </span>show this help screen<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-family:"Courier New";
+background:yellow;mso-highlight:yellow'>See http://fit.c2.com for further
+information and to report bugs</span><span style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>Implementations
+should exit without performing any other action when the --help option is
+encountered.<o:p></o:p></span></p>
+
+<h3><a name="_Toc189305503"><span style='background:yellow;mso-highlight:yellow'>Option
+Positioning</span></a><span style='background:yellow;mso-highlight:yellow'><o:p></o:p></span></h3>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>Options
+may be in any position on the command line.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.8pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><span style='mso-bidi-font-family:"Times New Roman";
+  color:silver;background:yellow;mso-highlight:yellow'>fat.CommandLineFixture</span></span><span
+  style='mso-bidi-font-family:"Times New Roman";color:silver;background:yellow;
+  mso-highlight:yellow'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b style='mso-bidi-font-weight:normal'><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>CommandLine</span></b></span><b style='mso-bidi-font-weight:normal'><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman";
+  background:yellow;mso-highlight:yellow'>InputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>()<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman";
+  background:yellow;mso-highlight:yellow'>OutputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>()<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><b><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>Encoding()</span></b><span style='mso-bidi-font-family:
+  "Times New Roman";background:yellow;mso-highlight:yellow'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New";background:yellow;mso-highlight:
+  yellow'>--encoding=utf-8 infile.html outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>infile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>utf-8<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New";background:yellow;mso-highlight:
+  yellow'>infile.html --encoding=utf-8 outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>infile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>utf-8<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New";background:yellow;mso-highlight:
+  yellow'>infile.html outfile.html --encoding=utf-8<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>infile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>outfile.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>utf-8<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>But
+“--&quot; by itself indicates that no further options will be processed.<span
+style='mso-spacerun:yes'>  </span>This allows file names to include hyphens.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.8pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0'>
+  <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><span style='mso-bidi-font-family:"Times New Roman";
+  color:silver;background:yellow;mso-highlight:yellow'>fat.CommandLineFixture</span></span><span
+  style='mso-bidi-font-family:"Times New Roman";color:silver;background:yellow;
+  mso-highlight:yellow'><o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b style='mso-bidi-font-weight:normal'><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>CommandLine</span></b></span><b style='mso-bidi-font-weight:normal'><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'><o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman";
+  background:yellow;mso-highlight:yellow'>InputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>()<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><b><span style='mso-bidi-font-family:"Times New Roman";
+  background:yellow;mso-highlight:yellow'>OutputFile</span></b></span><b><span
+  style='mso-bidi-font-family:"Times New Roman";background:yellow;mso-highlight:
+  yellow'>()<o:p></o:p></span></b></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><b><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>Encoding()</span></b><span style='mso-bidi-font-family:
+  "Times New Roman";background:yellow;mso-highlight:yellow'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New";background:yellow;mso-highlight:
+  yellow'>-- --in.html --out.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>--in.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>--out.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>Implementation-specific<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New";background:yellow;mso-highlight:
+  yellow'>-- --encoding=utf8 out.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>--encoding=utf8<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>out.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>Implementation-specific<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='font-family:"Courier New";background:yellow;mso-highlight:
+  yellow'>--encoding=utf8 -- --encoding=utf8 out.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>--encoding=utf8<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>out.html<o:p></o:p></span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p><span style='mso-bidi-font-family:"Times New Roman";background:yellow;
+  mso-highlight:yellow'>utf8</span><span style='mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h3><a name="_Toc189305504">Error Codes</a></h3>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Fit should exit with the following error codes:</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'>When the
+     input file is successfully processed without any test failures or
+     exceptions: <b style='mso-bidi-font-weight:normal'>zero</b></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'>When
+     the input file is successfully processed, but has failures or exceptions: <b
+     style='mso-bidi-font-weight:normal'>the sum of failures plus exceptions</b></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'>When
+     the input file could not be processed: <b style='mso-bidi-font-weight:
+     normal'>-1 (negative one)</b></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo3;tab-stops:list .5in'><span
+     style='background:yellow;mso-highlight:yellow'>When the --help or
+     --version option is provided: <b style='mso-bidi-font-weight:normal'>zero</b><o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<h3><a name="_Toc189305505"><span style='background:yellow;mso-highlight:yellow'>Error
+Messages</span></a><span style='background:yellow;mso-highlight:yellow'><o:p></o:p></span></h3>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'>Error
+messages should be prefixed with the name of the program as described in
+section 4.4 of <a
+href="http://www.gnu.org/prep/standards/standards.html#Command_002dLine-Interfaces.">the
+GNU standard</a>.<span style='mso-spacerun:yes'>  </span>For example:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=GramE><span
+style='font-family:"Courier New";background:yellow;mso-highlight:yellow'>fit</span></span><span
+style='font-family:"Courier New";background:yellow;mso-highlight:yellow'>:
+infile.html: file not found<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='background:yellow;mso-highlight:yellow'><br>
+Error messages are otherwise implementation-specific.</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc92532399"></a><a name="_Toc189305506"><span style='mso-bookmark:
+_Toc92532399'><span style='mso-bidi-font-family:"Times New Roman"'>Run Results</span></span></a><span
+style='mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p><span style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;mso-padding-alt:0in 0in 0in 0in'>
+ <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+  <td valign=top style='padding:0in 5.4pt 0in 5.4pt'>
+  <p><span class=SpellE><span style='mso-bidi-font-family:"Times New Roman";
+  color:silver'>fit.Summary</span></span><span style='mso-bidi-font-family:
+  "Times New Roman"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='mso-bidi-font-family:"Times New Roman"'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

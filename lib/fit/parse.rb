@@ -68,19 +68,19 @@ module Fit
       @more.nil? ? 1 : @more.size + 1
     end
 
-    def print out
-      out.print @leader
-      out.print @tag
+    def print out, conv=nil
+      out.print conv.nil? ? @leader : conv.iconv(@leader)
+      out.print conv.nil? ? @tag : conv.iconv(@tag)
       if @parts
-        @parts.print out
+        @parts.print out, conv
       else
-        out.print @body
+        out.print conv.nil? ? @body : conv.iconv(@body)
       end
-      out.print @end
+      out.print conv.nil? ? @end : conv.iconv(@end)
       if @more
-        @more.print out
+        @more.print out, conv
       else
-        out.print @trailer
+        out.print conv.nil? ? @trailer : conv.iconv(@end)
       end
     end
 
@@ -170,7 +170,11 @@ module Fit
       # unescape HTML entities
       str = str.gsub(%r{&lt;}, '<').gsub(%r{&gt;}, '>').gsub(%r{&nbsp;}, ' ').gsub(%r{&quot;}, '"').gsub(%r{&amp;}, '&')
       # unescape smart quotes
-      str.gsub(/\223/, '"').gsub(/\224/, '"').gsub(/\221/, "'").gsub(/\222/, "'")
+      left_double_quotes = [0x201c].pack('U')
+      right_double_quotes = [0x201d].pack('U')
+      left_single_quotes = [0x2018].pack('U')
+      right_single_quotes = [0x2019].pack('U')
+      str.gsub(left_double_quotes, '"').gsub(right_double_quotes, '"').gsub(left_single_quotes, "'").gsub(right_single_quotes, "'")
     end
 
     def Parse.unescape_numeric_entities s
@@ -187,7 +191,6 @@ module Fit
           entity = s[(starts_at + 2)...ends_at]
           entity = '0x' + entity[1..-1] if (entity =~ /^x/ or entity =~ /^X/)
           char = Integer(entity)
-          #char = (entity =~ /^x/ or entity =~ /^X/) ? entity[1..-1].to_i(16) : entity.to_i
           if char <= 0xFFFF
             result += s[last_start...starts_at] + [char].pack('U')
             last_start = ends_at + 1
@@ -202,8 +205,8 @@ module Fit
     end
 
     def Parse.condense_whitespace s
-      # NOT_BREAKING_SPACE is decimal character 160, hex a0, oct 240
-      s.gsub(%r{\s+}, ' ').gsub(/\240/, ' ').gsub(%r{&nbsp;}, ' ').strip
+      not_breaking_space = [0x00a0].pack('U')
+      s.gsub(%r{\s+}, ' ').gsub(not_breaking_space, ' ').gsub(%r{&nbsp;}, ' ').strip
     end
 
     # The original implementation of footnote hardcodes the creation path,

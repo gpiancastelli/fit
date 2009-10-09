@@ -9,7 +9,7 @@ module Fat
     @@metadata = {'html' => String}
     attr_writer :html
     def text
-      html = @html.gsub(/\\u00a0/, "\240")
+      html = @html.gsub(/\\u00a0/, [0x00a0].pack('U'))
       escape_ascii(Fit::Parse.html_to_text(html))
     end
     def escape_ascii text

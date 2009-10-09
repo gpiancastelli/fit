@@ -6,13 +6,13 @@ http://fit.rubyforge.org for further information.
 
 Author:: Giulio Piancastelli <giulio.piancastelli@gmail.com>
 Requires:: Ruby 1.8 or later
-License:: RubyFIT is Copyright 2004-2006 by Giulio Piancastelli.
+License:: RubyFIT is Copyright 2004-2009 by Giulio Piancastelli.
           FIT is Copyright 2002 by Cunningham & Cunningham, Inc.
           Both FIT and RubyFIT are released under the terms of the GNU
           General Public License version 2 or later.
 
 Document created on Saturday 11th December, 2004.
-Last revised on Sunday 28th December, 2008.
+Last revised on Friday 9th October, 2009.
 
 == Quick Start
 
@@ -64,9 +64,26 @@ Terminal or Console prompt are made available at any file system
 location.
 
 You can invoke the +fit+ script passing two arguments: the first is the
-HTML file containing tables to be tested, the second is the name of the
-HTML file which will be created by RubyFIT and will contain the results
-of the tests.
+name of the input HTML file containing tables to be tested, the second
+is the name of the output HTML file which will be created by RubyFIT and
+will contain the results of the tests.
+
+As of version 1.2, the command-line script supports an <kbd>--encoding</kbd>
+option, used to indicate the encoding of the input and output files.
+Internally, RubyFIT uses UTF-8 as the default encoding to substitute
+characters such as non-breaking spaces and typographic quotes. This means
+that, if your HTML files are already encoded in UTF-8, you don't need to
+pass the <kbd>--encoding</kbd> option on the command line; otherwise, you
+need to supply the proper character encoding in order to have the script
+correctly recognize and produce HTML code.
+
+As an example, the <tt>doc/spec</tt> directory contains two files for the
+parsing Fit specification, each with a different encoding. The first file is
+named <tt>parse.html</tt> and is encoded in UTF-8; this is the file that is
+run by the +rake fitspec+ command. The second file is named
+<tt>parse-windows-1252.html</tt> and is encoded in windows-1252. When fed
+to the +fit+ script on the command line, the tests in this file pass only
+if the proper <kbd>--encoding=windows-1252</kbd> option is supplied.
 
 === RubyFIT from a web server
 

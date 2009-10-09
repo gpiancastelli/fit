@@ -1,49 +1,39 @@
 <html xmlns:v="urn:schemas-microsoft-com:vml"
 xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:w="urn:schemas-microsoft-com:office:word"
-xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
 xmlns="http://www.w3.org/TR/REC-html40">
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=ProgId content=Word.Document>
 <meta name=Generator content="Microsoft Word 10">
 <meta name=Originator content="Microsoft Word 10">
 <link rel=File-List href="annotation_files/filelist.xml">
 <title>Fit Specification</title>
-<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
- name="PersonName"/>
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
   <o:Author>Jim Little</o:Author>
-  <o:LastAuthor>Jim Little</o:LastAuthor>
-  <o:Revision>179</o:Revision>
-  <o:TotalTime>1459</o:TotalTime>
+  <o:LastAuthor>James Shore</o:LastAuthor>
+  <o:Revision>181</o:Revision>
+  <o:TotalTime>1461</o:TotalTime>
   <o:Created>2004-07-19T18:44:00Z</o:Created>
-  <o:LastSaved>2005-01-04T02:27:00Z</o:LastSaved>
+  <o:LastSaved>2008-01-27T03:54:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>1592</o:Words>
-  <o:Characters>9076</o:Characters>
+  <o:Words>1599</o:Words>
+  <o:Characters>9115</o:Characters>
   <o:Lines>75</o:Lines>
   <o:Paragraphs>21</o:Paragraphs>
-  <o:CharactersWithSpaces>10647</o:CharactersWithSpaces>
-  <o:Version>10.6626</o:Version>
+  <o:CharactersWithSpaces>10693</o:CharactersWithSpaces>
+  <o:Version>10.6830</o:Version>
  </o:DocumentProperties>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <w:WordDocument>
-  <w:SpellingState>Clean</w:SpellingState>
-  <w:GrammarState>Clean</w:GrammarState>
   <w:Compatibility>
    <w:ApplyBreakingRules/>
   </w:Compatibility>
   <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
  </w:WordDocument>
-</xml><![endif]--><!--[if !mso]><object
- classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
-<style>
-st1\:*{behavior:url(#ieooui) }
-</style>
-<![endif]-->
+</xml><![endif]-->
 <style>
 <!--
  /* Font Definitions */
@@ -53,8 +43,9 @@ st1\:*{behavior:url(#ieooui) }
 	mso-font-alt:\5B8B\4F53;
 	mso-font-charset:134;
 	mso-generic-font-family:auto;
+	mso-font-format:other;
 	mso-font-pitch:variable;
-	mso-font-signature:3 135135232 16 0 262145 0;}
+	mso-font-signature:1 135135232 16 0 262144 0;}
 @font-face
 	{font-family:Tahoma;
 	panose-1:2 11 6 4 3 5 4 4 2 4;
@@ -64,7 +55,6 @@ st1\:*{behavior:url(#ieooui) }
 	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
 @font-face
 	{font-family:"\@SimSun";
-	panose-1:2 1 6 0 3 1 1 1 1 1;
 	mso-font-charset:134;
 	mso-generic-font-family:auto;
 	mso-font-pitch:variable;
@@ -270,12 +260,6 @@ p
 	font-size:12.0pt;
 	font-family:"Times New Roman";
 	mso-fareast-font-family:SimSun;}
-span.SpellE
-	{mso-style-name:"";
-	mso-spl-e:yes;}
-span.GramE
-	{mso-style-name:"";
-	mso-gram-e:yes;}
 @page Section1
 	{size:8.5in 11.0in;
 	margin:1.0in 1.25in 1.0in 1.25in;
@@ -371,7 +355,7 @@ table.MsoTableGrid
 	font-family:"Times New Roman";}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="4098"/>
+ <o:shapedefaults v:ext="edit" spidmax="6146"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
@@ -386,11 +370,10 @@ table.MsoTableGrid
 
 <p>&nbsp;</p>
 
-<p>This portion of the Fit spe<st1:PersonName>c</st1:PersonName>ifi<st1:PersonName>c</st1:PersonName>ation
-des<st1:PersonName>c</st1:PersonName>ribes how Fit <st1:PersonName>c</st1:PersonName>an
-modify, or “annotate,” HTML do<st1:PersonName>c</st1:PersonName>uments.</p>
+<p>This portion of the Fit specification describes how Fit can modify, or
+â€œannotate,â€ HTML documents.</p>
 
-<p><span style='mso-spacerun:yes'> </span></p>
+<p><span style='mso-spacerun:yes'>Â </span></p>
 
 <p><b><u>Contents:<o:p></o:p></u></b></p>
 
@@ -398,40 +381,36 @@ modify, or “annotate,” HTML do<st1:PersonName>c</st1:PersonName>uments.</p>
 
 <p class=MsoToc2 style='tab-stops:right dotted 431.5pt'><!--[if supportFields]><b><span
 style='text-transform:uppercase'><span style='mso-element:field-begin'></span><span
-style='mso-spacerun:yes'> </span>TOC \o &quot;2-3&quot; \h \z \u <span
+style='mso-spacerun:yes'>Â </span>TOC \o &quot;2-3&quot; \h \z \u <span
 style='mso-element:field-separator'></span></span></b><![endif]--><span
 class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540176">Text<span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
 text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540176 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540176 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>1</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>1<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100370036000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
 style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
-style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";font-variant:
-normal !important;mso-no-proof:yes'><o:p></o:p></span></p>
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></p>
 
 <p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
 class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540177">Adding
 Text<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
 none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540177 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540177 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>2</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>2<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100370037000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -444,34 +423,30 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540178">Tags<s
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
 text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540178 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540178 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>2</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>2<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100370038000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
 style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
-style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";font-variant:
-normal !important;mso-no-proof:yes'><o:p></o:p></span></p>
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></p>
 
 <p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
 class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540179">Cell
 Tags<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
 none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540179 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540179 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>2</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>2<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100370039000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -484,14 +459,12 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540180">Row
 Tags<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
 none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540180 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540180 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>4</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>4<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100380030000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -504,14 +477,11 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540181">Table
 Tags<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
 none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF _Toc92540181
+\h </span><span style='color:windowtext;text-decoration:none;text-underline:
+none'><span style='display:none;mso-hide:screen'><span style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540181 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>4</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>4<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100380031000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -524,34 +494,30 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540182">Table
 Structure<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
 none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540182 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540182 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>5</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>5<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100380032000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
 style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
-style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";font-variant:
-normal !important;mso-no-proof:yes'><o:p></o:p></span></p>
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></p>
 
 <p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
 class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540183">Cells<span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
 text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540183 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540183 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>5</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>5<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100380033000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -564,14 +530,12 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540184">Rows<s
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
 text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540184 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540184 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>6</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>6<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100380034000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -584,14 +548,12 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540185">Tables
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
 text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540185 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540185 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>6</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>6<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100380035000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -604,34 +566,30 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540186">Standa
 Annotations<span style='color:windowtext;display:none;mso-hide:screen;
 text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540186 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540186 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>7</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>7<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100380036000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
 style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
-style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";font-variant:
-normal !important;mso-no-proof:yes'><o:p></o:p></span></p>
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></p>
 
 <p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
 class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540187">HTML
 Conversion<span style='color:windowtext;display:none;mso-hide:screen;
 text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540187 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540187 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>8</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>8<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100380037000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -644,14 +602,12 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540188">Markup
 Removal<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
 none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540188 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540188 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>8</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>8<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100380038000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -664,34 +620,30 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540189">Text
 to HTML<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
 none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540189 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540189 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>9</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>9<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100380039000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
 style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
-style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";font-variant:
-normal !important;mso-no-proof:yes'><o:p></o:p></span></p>
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></p>
 
 <p class=MsoToc3 style='tab-stops:right dotted 431.5pt'><span
 class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540190">Entities<span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
 text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540190 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540190 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>9</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>9<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100390030000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -704,14 +656,12 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540191">Line
 Feeds<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
 none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540191 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540191 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>9</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>9<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100390031000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -724,14 +674,12 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540192">Spaces
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
 text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540192 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540192 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>10</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>10<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100390032000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
@@ -744,20 +692,18 @@ class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc92540193">Run
 Results<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
 none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'><span style='mso-element:field-begin'></span></span><span
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc92540193 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
 style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'> PAGEREF _Toc92540193 \h </span><span style='color:windowtext;
-display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
-style='mso-element:field-separator'></span></span><![endif]--><span
-style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
-text-underline:none'>10</span><span style='color:windowtext;display:none;
-mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+text-underline:none'>10<!--[if gte mso 9]><xml>
  <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300390032003500340030003100390033000000</w:data>
 </xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
 display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
 style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
-style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";font-variant:
-normal !important;mso-no-proof:yes'><o:p></o:p></span></p>
+style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman";mso-no-proof:
+yes'><o:p></o:p></span></p>
 
 <p><!--[if supportFields]><b><span style='font-size:10.0pt;mso-bidi-font-size:
 12.0pt;text-transform:uppercase'><span style='mso-element:field-end'></span></span></b><![endif]--><o:p>&nbsp;</o:p></p>
@@ -766,8 +712,8 @@ normal !important;mso-no-proof:yes'><o:p></o:p></span></p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>Fixtures may <st1:PersonName>c</st1:PersonName>hange the
-body of any individual <st1:PersonName>c</st1:PersonName>ell in their table. </p>
+<p class=MsoNormal>Fixtures may change the body of any individual cell in their
+table. </p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -778,7 +724,7 @@ body of any individual <st1:PersonName>c</st1:PersonName>ell in their table. </p
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -805,7 +751,7 @@ body of any individual <st1:PersonName>c</st1:PersonName>ell in their table. </p
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -823,13 +769,13 @@ body of any individual <st1:PersonName>c</st1:PersonName>ell in their table. </p
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OverwriteCellBody</b></span><b><o:p></o:p></b></p>
+  <p><b>OverwriteCellBody<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -837,10 +783,10 @@ body of any individual <st1:PersonName>c</st1:PersonName>ell in their table. </p
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;top
-  left&lt;/td&gt;&lt;td&gt;top right&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;bottom
-  left&lt;/td&gt;&lt;td&gt;bottom right&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;top
+  left&lt;/td&gt;&lt;td&gt;top right&lt;/td&gt;&lt;/tr&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;bottom
+  left&lt;/td&gt;&lt;td&gt;bottom right&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -866,10 +812,10 @@ body of any individual <st1:PersonName>c</st1:PersonName>ell in their table. </p
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;new
-  value&lt;/td&gt;&lt;td&gt;top right&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;bottom
-  left&lt;/td&gt;&lt;td&gt;bottom right&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;new
+  value&lt;/td&gt;&lt;td&gt;top right&lt;/td&gt;&lt;/tr&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;bottom
+  left&lt;/td&gt;&lt;td&gt;bottom right&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -902,10 +848,10 @@ body of any individual <st1:PersonName>c</st1:PersonName>ell in their table. </p
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;top
-  left&lt;/td&gt;&lt;td&gt;top right&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;bottom
-  left&lt;/td&gt;&lt;td&gt;another value&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;top
+  left&lt;/td&gt;&lt;td&gt;top right&lt;/td&gt;&lt;/tr&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;bottom
+  left&lt;/td&gt;&lt;td&gt;another value&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -914,8 +860,8 @@ body of any individual <st1:PersonName>c</st1:PersonName>ell in their table. </p
 <p><o:p>&nbsp;</o:p></p>
 
 <p>The raw HTML provided by the fixture is inserted into the table.<span
-style='mso-spacerun:yes'>  </span>(Fixtures may also ask for text to HTML <st1:PersonName>c</st1:PersonName>onversion
-as des<st1:PersonName>c</st1:PersonName>ribed below.)</p>
+style='mso-spacerun:yes'>Â  </span>(Fixtures may also ask for text to HTML
+conversion as described below.)</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -926,7 +872,7 @@ as des<st1:PersonName>c</st1:PersonName>ribed below.)</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -953,7 +899,7 @@ as des<st1:PersonName>c</st1:PersonName>ribed below.)</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -971,13 +917,13 @@ as des<st1:PersonName>c</st1:PersonName>ribed below.)</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OverwriteCellBody</b></span><b><o:p></o:p></b></p>
+  <p><b>OverwriteCellBody<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
@@ -985,9 +931,8 @@ as des<st1:PersonName>c</st1:PersonName>ribed below.)</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p align=right style='text-align:right'><span style='mso-spacerun:yes'> 
-  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p align=right style='text-align:right'><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -1006,17 +951,16 @@ as des<st1:PersonName>c</st1:PersonName>ribed below.)</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;b&gt;&lt;<span class=SpellE>i</span>&gt;Ex<st1:PersonName>c</st1:PersonName>ited
-  text!&lt;/<span class=SpellE>i</span>&gt;&lt;/b&gt;</p>
+  <p>&lt;b&gt;&lt;i&gt;Excited text!&lt;/i&gt;&lt;/b&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;&lt;b&gt;&lt;<span
-  class=SpellE>i</span>&gt;Ex<st1:PersonName>c</st1:PersonName>ited text!&lt;/<span
-  class=SpellE>i</span>&gt;&lt;/b&gt;&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;&lt;b&gt;&lt;i&gt;Excited
+  text!&lt;/i&gt;&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1028,8 +972,8 @@ as des<st1:PersonName>c</st1:PersonName>ribed below.)</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
-<p>Fixtures may add text to the body of a <st1:PersonName>c</st1:PersonName>ell
-rather than simply overwriting it.</p>
+<p>Fixtures may add text to the body of a cell rather than simply overwriting
+it.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -1040,7 +984,7 @@ rather than simply overwriting it.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -1067,7 +1011,7 @@ rather than simply overwriting it.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -1085,13 +1029,13 @@ rather than simply overwriting it.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>AddToCellBody</b></span><b><o:p></o:p></b></p>
+  <p><b>AddToCellBody<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
@@ -1099,8 +1043,8 @@ rather than simply overwriting it.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -1126,8 +1070,8 @@ rather than simply overwriting it.</p>
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text...
-  more text&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;text... more
+  text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1145,8 +1089,7 @@ rather than simply overwriting it.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>Fixtures may overwrite <st1:PersonName>c</st1:PersonName>ell
-tags.</p>
+<p class=MsoNormal>Fixtures may overwrite cell tags.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -1157,7 +1100,7 @@ tags.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -1184,7 +1127,7 @@ tags.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -1202,13 +1145,13 @@ tags.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OverwriteCellTag</b></span><b><o:p></o:p></b></p>
+  <p><b>OverwriteCellTag<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -1216,8 +1159,8 @@ tags.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -1236,15 +1179,15 @@ tags.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td align=”right”&gt;</p>
+  <p>&lt;td align=â€rightâ€&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td
-  align=”right”&gt;text&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td
+  align=â€rightâ€&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1253,9 +1196,8 @@ tags.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td
-  old=”<span class=SpellE>foo</span>”&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td
+  old=â€fooâ€&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -1274,15 +1216,14 @@ tags.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td new=”bar”&gt;</p>
+  <p>&lt;td new=â€barâ€&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td
-  new=”bar”&gt;text&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td new=â€barâ€&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1290,13 +1231,11 @@ tags.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>They may also add to <st1:PersonName>c</st1:PersonName>ell tags.<span
-style='mso-spacerun:yes'>  </span>We’ve delimited the “<span class=SpellE>AddToCellTag</span>”
-<st1:PersonName>c</st1:PersonName>olumn in this example with bra<st1:PersonName>c</st1:PersonName>kets
-so we <st1:PersonName>c</st1:PersonName>an in<st1:PersonName>c</st1:PersonName>lude
-a leading spa<st1:PersonName>c</st1:PersonName>e.<span
-style='mso-spacerun:yes'>  </span>Fit doesn’t add spa<st1:PersonName>c</st1:PersonName>es
-for you when you add to a tag.</p>
+<p class=MsoNormal>They may also add to cell tags.<span
+style='mso-spacerun:yes'>Â  </span>Weâ€™ve delimited the â€œAddToCellTagâ€ column in
+this example with brackets so we can include a leading space.<span
+style='mso-spacerun:yes'>Â  </span>Fit doesnâ€™t add spaces for you when you add
+to a tag.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -1307,7 +1246,7 @@ for you when you add to a tag.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -1334,7 +1273,7 @@ for you when you add to a tag.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -1352,13 +1291,13 @@ for you when you add to a tag.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>AddToCellTag</b></span><b><o:p></o:p></b></p>
+  <p><b>AddToCellTag<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -1366,8 +1305,8 @@ for you when you add to a tag.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -1386,15 +1325,15 @@ for you when you add to a tag.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>[ align=”right”]</p>
+  <p>[ align=â€rightâ€]</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td
-  align=”right”&gt;text&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td
+  align=â€rightâ€&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1403,9 +1342,7 @@ for you when you add to a tag.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td
-  old=”<span class=SpellE>foo</span>”&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td old=â€fooâ€&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -1424,16 +1361,15 @@ for you when you add to a tag.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>[ new=”bar”]</p>
+  <p>[ new=â€barâ€]</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td
-  old=”<span class=SpellE>foo</span>” new=”bar”&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td old=â€fooâ€
+  new=â€barâ€&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1459,16 +1395,15 @@ for you when you add to a tag.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>[no-added-spa<st1:PersonName>c</st1:PersonName>e]</p>
+  <p>[no-added-space]</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td
-  old=”<span class=SpellE>foo”no</span>-added-spa<st1:PersonName>c</st1:PersonName>e&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td
+  old=â€fooâ€no-added-space&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1476,14 +1411,12 @@ for you when you add to a tag.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>Fixtures <st1:PersonName>c</st1:PersonName>an even <st1:PersonName>c</st1:PersonName>hange
-the type of the tag.<span style='mso-spacerun:yes'>  </span>If they don’t spe<st1:PersonName>c</st1:PersonName>ify
-an ending tag, they’ll <st1:PersonName>c</st1:PersonName>reate a mismat<st1:PersonName>c</st1:PersonName>hed
-tag.<span style='mso-spacerun:yes'>  </span>Fit doesn’t prevent fixtures from
-intentionally <st1:PersonName>c</st1:PersonName>reating mismat<st1:PersonName>c</st1:PersonName>hed
-tags either.</p>
+<p class=MsoNormal>Fixtures can even change the type of the tag.<span
+style='mso-spacerun:yes'>Â  </span>If they donâ€™t specify an ending tag, theyâ€™ll
+create a mismatched tag.<span style='mso-spacerun:yes'>Â  </span>Fit doesnâ€™t
+prevent fixtures from intentionally creating mismatched tags either.</p>
 
-<p class=MsoNormal><span style='mso-spacerun:yes'> </span></p>
+<p class=MsoNormal><span style='mso-spacerun:yes'>Â </span></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
  style='margin-left:5.8pt;border-collapse:collapse;border:none;mso-border-alt:
@@ -1492,7 +1425,7 @@ tags either.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -1524,7 +1457,7 @@ tags either.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -1542,19 +1475,19 @@ tags either.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OverwriteCellTag</b></span><b><o:p></o:p></b></p>
+  <p><b>OverwriteCellTag<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OverwriteEndCellTag</b></span><b><o:p></o:p></b></p>
+  <p><b>OverwriteEndCellTag<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -1562,8 +1495,8 @@ tags either.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -1582,7 +1515,7 @@ tags either.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;<span class=SpellE>foo</span>&gt;</p>
+  <p>&lt;foo&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -1595,8 +1528,8 @@ tags either.</p>
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;<span
-  class=SpellE>foo</span>&gt;text&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;foo&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1635,8 +1568,8 @@ tags either.</p>
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;bar&gt;text&lt;/bar&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;bar&gt;text&lt;/bar&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1662,7 +1595,7 @@ tags either.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;<span class=SpellE>foo</span>&gt;</p>
+  <p>&lt;foo&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -1675,8 +1608,8 @@ tags either.</p>
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;<span
-  class=SpellE>foo</span>&gt;text&lt;/bar&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;foo&gt;text&lt;/bar&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1699,7 +1632,7 @@ tags either.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -1731,7 +1664,7 @@ tags either.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -1743,25 +1676,25 @@ tags either.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OverwriteRowTag</b></span><b><o:p></o:p></b></p>
+  <p><b>OverwriteRowTag<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OverwriteEndRowTag</b></span><b><o:p></o:p></b></p>
+  <p><b>OverwriteEndRowTag<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>AddToRowTag</b></span><b><o:p></o:p></b></p>
+  <p><b>AddToRowTag<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -1769,8 +1702,8 @@ tags either.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -1783,7 +1716,7 @@ tags either.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;<span class=SpellE>tr</span> <span class=SpellE>valign</span>=”true”&gt;</p>
+  <p>&lt;tr valign=â€trueâ€&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -1802,9 +1735,8 @@ tags either.</p>
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span> <span
-  class=SpellE>valign</span>=”true”&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr
+  valign=â€trueâ€&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1843,7 +1775,7 @@ tags either.</p>
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'> 
+  <p><span style='mso-spacerun:yes'>Â 
   </span>&lt;bar&gt;&lt;td&gt;text&lt;/td&gt;&lt;/bar&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
@@ -1864,7 +1796,7 @@ tags either.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;<span class=SpellE>foo</span>&gt;</p>
+  <p>&lt;foo&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -1876,15 +1808,15 @@ tags either.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>[ attrib=”yes”]</p>
+  <p>[ attrib=â€yesâ€]</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>foo</span>
-  attrib=”yes”&gt;&lt;td&gt;text&lt;/td&gt;&lt;/bar&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;foo
+  attrib=â€yesâ€&gt;&lt;td&gt;text&lt;/td&gt;&lt;/bar&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -1896,7 +1828,7 @@ tags either.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal><span class=GramE>...and to table tags.</span></p>
+<p class=MsoNormal>...and to table tags.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -1907,7 +1839,7 @@ tags either.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -1934,31 +1866,31 @@ tags either.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OverwriteTableTag</b></span><b><o:p></o:p></b></p>
+  <p><b>OverwriteTableTag<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OverwriteEndTableTag</b></span><b><o:p></o:p></b></p>
+  <p><b>OverwriteEndTableTag<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>AddToTableTag</b></span><b><o:p></o:p></b></p>
+  <p><b>AddToTableTag<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -1966,15 +1898,14 @@ tags either.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;table border=”1”&gt;</p>
+  <p>&lt;table border=â€1â€&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -1992,9 +1923,9 @@ tags either.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;table border=”1”&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p>&lt;table border=â€1â€&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -2027,8 +1958,8 @@ tags either.</p>
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;bar&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/bar&gt;</p>
   </td>
  </tr>
@@ -2042,7 +1973,7 @@ tags either.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;<span class=SpellE>foo</span>&gt;</p>
+  <p>&lt;foo&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2054,15 +1985,15 @@ tags either.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>[ attrib=”yes”]</p>
+  <p>[ attrib=â€yesâ€]</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;<span class=SpellE>foo</span> attrib=”yes”&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p>&lt;foo attrib=â€yesâ€&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/bar&gt;</p>
   </td>
  </tr>
@@ -2070,17 +2001,14 @@ tags either.</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
-<h2><a name="_Toc92540182">Table Stru</a><st1:PersonName><span
- style='mso-bookmark:_Toc92540182'>c</span></st1:PersonName><span
-style='mso-bookmark:_Toc92540182'>ture</span></h2>
+<h2><a name="_Toc92540182">Table Structure</a></h2>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>In addition to being able to modify table <st1:PersonName>c</st1:PersonName>ontents,
-fixtures may also <st1:PersonName>c</st1:PersonName>hange the stru<st1:PersonName>c</st1:PersonName>ture
-of tables in any way they wish.<span style='mso-spacerun:yes'>  </span>The
-following examples show basi<st1:PersonName>c</st1:PersonName> possibilities, but
-any manipulation is possible.</p>
+<p class=MsoNormal>In addition to being able to modify table contents, fixtures
+may also change the structure of tables in any way they wish.<span
+style='mso-spacerun:yes'>Â  </span>The following examples show basic
+possibilities, but any manipulation is possible.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -2088,7 +2016,7 @@ any manipulation is possible.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>Fixtures may add <st1:PersonName>c</st1:PersonName>ells.</p>
+<p class=MsoNormal>Fixtures may add cells.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -2099,7 +2027,7 @@ any manipulation is possible.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -2126,7 +2054,7 @@ any manipulation is possible.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2144,13 +2072,13 @@ any manipulation is possible.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>AddCellFollowing</b></span><b><o:p></o:p></b></p>
+  <p><b>AddCellFollowing<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -2158,8 +2086,8 @@ any manipulation is possible.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -2178,16 +2106,16 @@ any manipulation is possible.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td&gt;new <st1:PersonName>c</st1:PersonName>ell&lt;/td&gt;</p>
+  <p>&lt;td&gt;new cell&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'> </span><span
-  style='mso-spacerun:yes'> </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;new
-  <st1:PersonName>c</st1:PersonName>ell&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;new
+  cell&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -2196,8 +2124,9 @@ any manipulation is possible.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;last
-  <st1:PersonName>c</st1:PersonName>ell&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;last
+  cell&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -2216,16 +2145,16 @@ any manipulation is possible.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td&gt;<span class=SpellE>yadda</span>&lt;/td&gt;</p>
+  <p>&lt;td&gt;yadda&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;<span
-  class=SpellE>yadda</span>&lt;/td&gt;&lt;td&gt;last <st1:PersonName>c</st1:PersonName>ell&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;yadda&lt;/td&gt;&lt;td&gt;last
+  cell&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -2233,7 +2162,7 @@ any manipulation is possible.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>Fixtures may remove <st1:PersonName>c</st1:PersonName>ells.</p>
+<p class=MsoNormal>Fixtures may remove cells.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -2244,7 +2173,7 @@ any manipulation is possible.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -2271,7 +2200,7 @@ any manipulation is possible.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2289,13 +2218,13 @@ any manipulation is possible.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>RemoveFollowingCell</b></span><b><o:p></o:p></b></p>
+  <p><b>RemoveFollowingCell<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -2303,9 +2232,9 @@ any manipulation is possible.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;<span
-  class=SpellE>yadda</span>&lt;/td&gt;&lt;td&gt;last <st1:PersonName>c</st1:PersonName>ell&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;yadda&lt;/td&gt;&lt;td&gt;last
+  cell&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -2331,8 +2260,9 @@ any manipulation is possible.</p>
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;last
-  <st1:PersonName>c</st1:PersonName>ell&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;last
+  cell&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -2341,9 +2271,9 @@ any manipulation is possible.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;<span
-  class=SpellE>yadda</span>&lt;/td&gt;&lt;td&gt;last <st1:PersonName>c</st1:PersonName>ell&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;yadda&lt;/td&gt;&lt;td&gt;last
+  cell&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -2369,8 +2299,8 @@ any manipulation is possible.</p>
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;<span
-  class=SpellE>yadda</span>&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;td&gt;yadda&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -2382,7 +2312,7 @@ any manipulation is possible.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>They <st1:PersonName>c</st1:PersonName>an add rows.</p>
+<p class=MsoNormal>They can add rows.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -2393,7 +2323,7 @@ any manipulation is possible.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -2415,7 +2345,7 @@ any manipulation is possible.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2427,13 +2357,13 @@ any manipulation is possible.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>AddRowFollowing</b></span><b><o:p></o:p></b></p>
+  <p><b>AddRowFollowing<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
@@ -2441,8 +2371,8 @@ any manipulation is possible.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -2455,17 +2385,16 @@ any manipulation is possible.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;new row&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p>&lt;tr&gt;&lt;td&gt;new row&lt;/td&gt;&lt;/tr&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;new
-  row&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;new
+  row&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -2484,7 +2413,7 @@ any manipulation is possible.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -2506,7 +2435,7 @@ any manipulation is possible.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2518,13 +2447,13 @@ any manipulation is possible.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>RemoveFollowingRow</b></span><b><o:p></o:p></b></p>
+  <p><b>RemoveFollowingRow<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
@@ -2532,10 +2461,9 @@ any manipulation is possible.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;se<st1:PersonName>c</st1:PersonName>ond
-  row&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;second
+  row&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
@@ -2555,8 +2483,8 @@ any manipulation is possible.</p>
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
  </tr>
@@ -2568,8 +2496,7 @@ any manipulation is possible.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>Fixtures <st1:PersonName>c</st1:PersonName>an even add
-entire tables.</p>
+<p class=MsoNormal>Fixtures can even add entire tables.</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
@@ -2580,7 +2507,7 @@ entire tables.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.AnnotationFixture</span></span></p>
+  <p><span style='color:silver'>fat.AnnotationFixture</span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -2597,19 +2524,19 @@ entire tables.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>AddTableFollowing</b></span><b><o:p></o:p></b></p>
+  <p><b>AddTableFollowing<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>ResultingHTML</b></span><b>()<o:p></o:p></b></p>
+  <p><b>ResultingHTML()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
@@ -2617,28 +2544,27 @@ entire tables.</p>
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
   <p>&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;table&gt;&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;</p>
+  <p>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</p>
   <p>new table</p>
-  <p>&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;&lt;/table&gt;</p>
+  <p>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p>&lt;table&gt;</p>
-  <p><span style='mso-spacerun:yes'>  </span>&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;text&lt;/td&gt;&lt;/<span
-  class=SpellE>tr</span>&gt;</p>
-  <p>&lt;/table&gt;&lt;table&gt;&lt;<span class=SpellE>tr</span>&gt;&lt;td&gt;</p>
+  <p><span style='mso-spacerun:yes'>Â 
+  </span>&lt;tr&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;</p>
+  <p>&lt;/table&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;</p>
   <p>new table</p>
-  <p>&lt;/td&gt;&lt;/<span class=SpellE>tr</span>&gt;&lt;/table&gt;</p>
+  <p>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</p>
   </td>
  </tr>
 </table>
@@ -2649,52 +2575,45 @@ entire tables.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>Fit provides some “short-<st1:PersonName>c</st1:PersonName>ut”
-annotations for fixtures to use.<span style='mso-spacerun:yes'>  </span>They
-have standard meanings:</p>
+<p class=MsoNormal>Fit provides some â€œshort-cutâ€ annotations for fixtures to
+use.<span style='mso-spacerun:yes'>Â  </span>They have standard meanings:</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
 <p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
 mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span class=GramE><b>right</b></span>: Fit <st1:PersonName>c</st1:PersonName>he<st1:PersonName>c</st1:PersonName>ked
-the <st1:PersonName>c</st1:PersonName>ell against the software and the software
-gave the <st1:PersonName>c</st1:PersonName>orre<st1:PersonName>c</st1:PersonName>t
-answer.</p>
+style='mso-list:Ignore'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>right</b>: Fit checked the cell against the
+software and the software gave the correct answer.</p>
 
 <p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
 mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span class=GramE><b>wrong</b></span>: Fit <st1:PersonName>c</st1:PersonName>he<st1:PersonName>c</st1:PersonName>ked
-the <st1:PersonName>c</st1:PersonName>ell against the software and the software
-gave the wrong answer.</p>
+style='mso-list:Ignore'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>wrong</b>: Fit checked the cell against the
+software and the software gave the wrong answer.</p>
 
 <p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
 mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span class=GramE><b>error</b></span>: Fit <st1:PersonName>c</st1:PersonName>he<st1:PersonName>c</st1:PersonName>ked
-the <st1:PersonName>c</st1:PersonName>ell against the software and the software
-generated a run-time error (e.g., an ex<st1:PersonName>c</st1:PersonName>eption).</p>
+style='mso-list:Ignore'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>error</b>: Fit checked the cell against the
+software and the software generated a run-time error (e.g., an exception).</p>
 
 <p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
 mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span class=GramE><b>info</b></span>: Fit added
-information to the <st1:PersonName>c</st1:PersonName>ell.<span
-style='mso-spacerun:yes'>  </span>(Typi<st1:PersonName>c</st1:PersonName>ally
-used when a <st1:PersonName>c</st1:PersonName>ell was blank to start with.)</p>
+style='mso-list:Ignore'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>info</b>: Fit added information to the
+cell.<span style='mso-spacerun:yes'>Â  </span>(Typically used when a cell was
+blank to start with.)</p>
 
 <p style='margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 lfo2;
 tab-stops:list .5in'><![if !supportLists]><span style='font-family:Symbol;
 mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span class=GramE><b>ignore</b></span>: Fit
-ignored the <st1:PersonName>c</st1:PersonName>ell entirely.</p>
+style='mso-list:Ignore'>Â·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>ignore</b>: Fit ignored the cell entirely.</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
@@ -2705,8 +2624,7 @@ ignored the <st1:PersonName>c</st1:PersonName>ell entirely.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.StandardAnnotationFixture</span></span><span
-  style='color:silver'><o:p></o:p></span></p>
+  <p><span style='color:silver'>fat.StandardAnnotationFixture<o:p></o:p></span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -2733,7 +2651,7 @@ ignored the <st1:PersonName>c</st1:PersonName>ell entirely.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span><b><o:p></o:p></b></p>
+  <p><b>OriginalHTML<o:p></o:p></b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2757,7 +2675,7 @@ ignored the <st1:PersonName>c</st1:PersonName>ell entirely.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>RenderedOutput</b></span><b>()<o:p></o:p></b></p>
+  <p><b>RenderedOutput()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -2782,10 +2700,7 @@ ignored the <st1:PersonName>c</st1:PersonName>ell entirely.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td <span class=SpellE>bg</span><st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>olor</span>=&quot;#<st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>fff</span><st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>f</span>&quot;&gt;text&lt;/td&gt;</p>
+  <p>&lt;td bgcolor=&quot;#cfffcf&quot;&gt;text&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2810,26 +2725,16 @@ ignored the <st1:PersonName>c</st1:PersonName>ell entirely.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>a<st1:PersonName>c</st1:PersonName>tual result</p>
+  <p>actual result</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td <span class=SpellE>bg</span><st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>olor</span>=&quot;#<span class=SpellE>ff</span><st1:PersonName><span
-   class=SpellE>c</span></st1:PersonName><span class=SpellE>f</span><st1:PersonName><span
-   class=SpellE>c</span></st1:PersonName><span class=SpellE>f</span>&quot;&gt;text
-  &lt;font size=-1 <st1:PersonName>c</st1:PersonName>olor=<span
-  style='background:yellow;mso-highlight:yellow'>&quot;</span>#<st1:PersonName>c</st1:PersonName>08080<span
-  style='background:yellow;mso-highlight:yellow'>&quot;</span>&gt;&lt;<span
-  class=SpellE>i</span>&gt;expe<st1:PersonName>c</st1:PersonName>ted&lt;/<span
-  class=SpellE>i</span>&gt;&lt;/font&gt;&lt;hr&gt;a<st1:PersonName>c</st1:PersonName>tual
-  result &lt;font size=-1 <st1:PersonName>c</st1:PersonName>olor=<span
-  style='background:yellow;mso-highlight:yellow'>&quot;</span>#<st1:PersonName>c</st1:PersonName>08080<span
-  style='background:yellow;mso-highlight:yellow'>&quot;</span>&gt;&lt;<span
-  class=SpellE>i</span>&gt;a<st1:PersonName>c</st1:PersonName>tual&lt;/<span
-  class=SpellE>i</span>&gt;&lt;/font&gt;&lt;/td&gt;</p>
+  <p>&lt;td bgcolor=&quot;#ffcfcf&quot;&gt;text &lt;font size=-1
+  color=&quot;#c08080&quot;&gt;&lt;i&gt;expected&lt;/i&gt;&lt;/font&gt;&lt;hr&gt;actual
+  result &lt;font size=-1
+  color=&quot;#c08080&quot;&gt;&lt;i&gt;actual&lt;/i&gt;&lt;/font&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2860,15 +2765,8 @@ ignored the <st1:PersonName>c</st1:PersonName>ell entirely.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>&lt;td <span
-  class=SpellE>bg</span></span><st1:PersonName><span class=SpellE><span
-   style='background:yellow;mso-highlight:yellow'>c</span></span></st1:PersonName><span
-  class=SpellE><span style='background:yellow;mso-highlight:yellow'>olor</span></span><span
-  style='background:yellow;mso-highlight:yellow'>=&quot;#<span class=SpellE>ffff</span></span><st1:PersonName><span
-   class=SpellE><span style='background:yellow;mso-highlight:yellow'>c</span></span></st1:PersonName><span
-  class=SpellE><span style='background:yellow;mso-highlight:yellow'>f</span></span><span
-  style='background:yellow;mso-highlight:yellow'>&quot;&gt;text&lt;hr&gt;&lt;pre&gt;error
-  message&lt;/pre&gt;&lt;/td&gt;<o:p></o:p></span></p>
+  <p>&lt;td bgcolor=&quot;#ffffcf&quot;&gt;text&lt;hr&gt;&lt;pre&gt;error
+  message&lt;/pre&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2899,9 +2797,8 @@ ignored the <st1:PersonName>c</st1:PersonName>ell entirely.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td&gt;text &lt;font <st1:PersonName>c</st1:PersonName>olor=<span
-  style='background:yellow;mso-highlight:yellow'>&quot;</span>#808080<span
-  style='background:yellow;mso-highlight:yellow'>&quot;</span>&gt;value&lt;/font&gt;&lt;/td&gt;</p>
+  <p>&lt;td&gt;text &lt;font
+  color=&quot;#808080&quot;&gt;value&lt;/font&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2932,8 +2829,7 @@ ignored the <st1:PersonName>c</st1:PersonName>ell entirely.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td <span class=SpellE>bg</span><st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>olor</span>=&quot;#<span class=SpellE>efefef</span>”&gt;text&lt;/td&gt;</p>
+  <p>&lt;td bgcolor=&quot;#efefefâ€&gt;text&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -2950,13 +2846,10 @@ ignored the <st1:PersonName>c</st1:PersonName>ell entirely.</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
-<p><span style='background:yellow;mso-highlight:yellow'>New text provided by
-the fixture is </span><st1:PersonName><span style='background:yellow;
- mso-highlight:yellow'>c</span></st1:PersonName><span style='background:yellow;
-mso-highlight:yellow'>onverted from text to HTML</span> as des<st1:PersonName>c</st1:PersonName>ribed
-in the “Text to HTML” se<st1:PersonName>c</st1:PersonName>tion below.<span
-style='mso-spacerun:yes'>  </span>This doesn’t apply to “right” and “ignore”
-annotations, whi<st1:PersonName>c</st1:PersonName>h don’t add any text.</p>
+<p>New text provided by the fixture is converted from text to HTML as described
+in the â€œText to HTMLâ€ section below.<span style='mso-spacerun:yes'>Â 
+</span>This doesnâ€™t apply to â€œrightâ€ and â€œignoreâ€ annotations, which donâ€™t add
+any text.</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
@@ -2967,8 +2860,7 @@ annotations, whi<st1:PersonName>c</st1:PersonName>h don’t add any text.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.StandardAnnotationFixture</span></span><span
-  style='color:silver'><o:p></o:p></span></p>
+  <p><span style='color:silver'>fat.StandardAnnotationFixture<o:p></o:p></span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -2995,7 +2887,7 @@ annotations, whi<st1:PersonName>c</st1:PersonName>h don’t add any text.</p>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span></p>
+  <p><b>OriginalHTML</b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3019,7 +2911,7 @@ annotations, whi<st1:PersonName>c</st1:PersonName>h don’t add any text.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>RenderedOutput</b></span><b>()<o:p></o:p></b></p>
+  <p><b>RenderedOutput()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
@@ -3044,16 +2936,10 @@ annotations, whi<st1:PersonName>c</st1:PersonName>h don’t add any text.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td <span class=SpellE>bg</span><st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>olor</span>=&quot;#<span class=SpellE>ff</span><st1:PersonName><span
-   class=SpellE>c</span></st1:PersonName><span class=SpellE>f</span><st1:PersonName><span
-   class=SpellE>c</span></st1:PersonName><span class=SpellE>f</span>&quot;&gt;text
-  &lt;font size=-1 <st1:PersonName>c</st1:PersonName>olor=&quot;#<st1:PersonName>c</st1:PersonName>08080&quot;&gt;&lt;<span
-  class=SpellE>i</span>&gt;expe<st1:PersonName>c</st1:PersonName>ted&lt;/<span
-  class=SpellE>i</span>&gt;&lt;/font&gt;&lt;hr&gt;A &amp;<span class=SpellE>lt;p</span>&gt;
-  tag &lt;font size=-1 <st1:PersonName>c</st1:PersonName>olor=&quot;#<st1:PersonName>c</st1:PersonName>08080&quot;&gt;&lt;<span
-  class=SpellE>i</span>&gt;a<st1:PersonName>c</st1:PersonName>tual&lt;/<span
-  class=SpellE>i</span>&gt;&lt;/font&gt;&lt;/td&gt;</p>
+  <p>&lt;td bgcolor=&quot;#ffcfcf&quot;&gt;text &lt;font size=-1
+  color=&quot;#c08080&quot;&gt;&lt;i&gt;expected&lt;/i&gt;&lt;/font&gt;&lt;hr&gt;A
+  &amp;lt;p&gt; tag &lt;font size=-1
+  color=&quot;#c08080&quot;&gt;&lt;i&gt;actual&lt;/i&gt;&lt;/font&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3084,15 +2970,8 @@ annotations, whi<st1:PersonName>c</st1:PersonName>h don’t add any text.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>&lt;td <span
-  class=SpellE>bg</span></span><st1:PersonName><span class=SpellE><span
-   style='background:yellow;mso-highlight:yellow'>c</span></span></st1:PersonName><span
-  class=SpellE><span style='background:yellow;mso-highlight:yellow'>olor</span></span><span
-  style='background:yellow;mso-highlight:yellow'>=&quot;#<span class=SpellE>ffff</span></span><st1:PersonName><span
-   class=SpellE><span style='background:yellow;mso-highlight:yellow'>c</span></span></st1:PersonName><span
-  class=SpellE><span style='background:yellow;mso-highlight:yellow'>f</span></span><span
-  style='background:yellow;mso-highlight:yellow'>&quot;&gt;text&lt;hr&gt;&lt;pre&gt;A
-  &amp;<span class=SpellE>lt;p</span>&gt; tag&lt;/pre&gt;&lt;/td&gt;<o:p></o:p></span></p>
+  <p>&lt;td bgcolor=&quot;#ffffcf&quot;&gt;text&lt;hr&gt;&lt;pre&gt;A
+  &amp;lt;p&gt; tag&lt;/pre&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3123,11 +3002,8 @@ annotations, whi<st1:PersonName>c</st1:PersonName>h don’t add any text.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>&lt;td&gt;text
-  &lt;font </span><st1:PersonName><span style='background:yellow;mso-highlight:
-   yellow'>c</span></st1:PersonName><span style='background:yellow;mso-highlight:
-  yellow'>olor=&quot;#808080&quot;&gt;A &amp;<span class=SpellE>lt;p</span>&gt;
-  tag&lt;/font&gt;&lt;/td&gt;<o:p></o:p></span></p>
+  <p>&lt;td&gt;text &lt;font color=&quot;#808080&quot;&gt;A &amp;lt;p&gt;
+  tag&lt;/font&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3144,18 +3020,11 @@ annotations, whi<st1:PersonName>c</st1:PersonName>h don’t add any text.</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
-<p><span style='background:yellow;mso-highlight:yellow'>When annotating “wrong”
-and “error” </span><st1:PersonName><span style='background:yellow;mso-highlight:
- yellow'>c</span></st1:PersonName><span style='background:yellow;mso-highlight:
-yellow'>ells, Fit strips mark-up from the existing </span><st1:PersonName><span
- style='background:yellow;mso-highlight:yellow'>c</span></st1:PersonName><span
-style='background:yellow;mso-highlight:yellow'>ontents of the </span><st1:PersonName><span
- style='background:yellow;mso-highlight:yellow'>c</span></st1:PersonName><span
-style='background:yellow;mso-highlight:yellow'>ell so troubleshooting is
-easier.</span><span style='mso-spacerun:yes'>  </span>It doesn’t do so for
-other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:p></span></p>
+<p>When annotating â€œwrongâ€ and â€œerrorâ€ cells, Fit strips mark-up from the
+existing contents of the cell so troubleshooting is easier.<span
+style='mso-spacerun:yes'>Â  </span>It doesnâ€™t do so for other annotations.</p>
 
-<p><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+<p><o:p>&nbsp;</o:p></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
  style='margin-left:5.8pt;border-collapse:collapse;border:none;mso-border-alt:
@@ -3164,8 +3033,7 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.StandardAnnotationFixture</span></span><span
-  style='color:silver'><o:p></o:p></span></p>
+  <p><span style='color:silver'>fat.StandardAnnotationFixture<o:p></o:p></span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -3192,7 +3060,7 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span></p>
+  <p><b>OriginalHTML</b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3216,15 +3084,14 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>RenderedOutput</b></span><b>()<o:p></o:p></b></p>
+  <p><b>RenderedOutput()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td&gt;&lt;<span class=SpellE>ul</span>&gt;&lt;<span class=SpellE>li</span>&gt;text&lt;/<span
-  class=SpellE>li</span>&gt;&lt;/<span class=SpellE>ul</span>&gt;&lt;/td&gt;</p>
+  <p>&lt;td&gt;&lt;ul&gt;&lt;li&gt;text&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3242,12 +3109,8 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td <span class=SpellE>bg</span><st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>olor</span>=&quot;#<st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>fff</span><st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>f</span>&quot;&gt;&lt;<span class=SpellE>ul</span>&gt;&lt;<span
-  class=SpellE>li</span>&gt;text&lt;/<span class=SpellE>li</span>&gt;&lt;/<span
-  class=SpellE>ul</span>&gt;&lt;/td&gt;</p>
+  <p>&lt;td
+  bgcolor=&quot;#cfffcf&quot;&gt;&lt;ul&gt;&lt;li&gt;text&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3260,52 +3123,28 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  <p><o:p>&nbsp;</o:p></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>wrong<o:p></o:p></span></p>
+  <p>wrong</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>a</span><st1:PersonName><span
-   style='background:yellow;mso-highlight:yellow'>c</span></st1:PersonName><span
-  style='background:yellow;mso-highlight:yellow'>tual result<o:p></o:p></span></p>
+  <p>actual result</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>&lt;td <span
-  class=SpellE>bg</span></span><st1:PersonName><span class=SpellE><span
-   style='background:yellow;mso-highlight:yellow'>c</span></span></st1:PersonName><span
-  class=SpellE><span style='background:yellow;mso-highlight:yellow'>olor</span></span><span
-  style='background:yellow;mso-highlight:yellow'>=&quot;#<span class=SpellE>ff</span></span><st1:PersonName><span
-   class=SpellE><span style='background:yellow;mso-highlight:yellow'>c</span></span></st1:PersonName><span
-  class=SpellE><span style='background:yellow;mso-highlight:yellow'>f</span></span><st1:PersonName><span
-   class=SpellE><span style='background:yellow;mso-highlight:yellow'>c</span></span></st1:PersonName><span
-  class=SpellE><span style='background:yellow;mso-highlight:yellow'>f</span></span><span
-  style='background:yellow;mso-highlight:yellow'>&quot;&gt;text &lt;font
-  size=-1 </span><st1:PersonName><span style='background:yellow;mso-highlight:
-   yellow'>c</span></st1:PersonName><span style='background:yellow;mso-highlight:
-  yellow'>olor=&quot;#</span><st1:PersonName><span style='background:yellow;
-   mso-highlight:yellow'>c</span></st1:PersonName><span style='background:yellow;
-  mso-highlight:yellow'>08080&quot;&gt;&lt;<span class=SpellE>i</span>&gt;expe</span><st1:PersonName><span
-   style='background:yellow;mso-highlight:yellow'>c</span></st1:PersonName><span
-  style='background:yellow;mso-highlight:yellow'>ted&lt;/<span class=SpellE>i</span>&gt;&lt;/font&gt;&lt;hr&gt;a</span><st1:PersonName><span
-   style='background:yellow;mso-highlight:yellow'>c</span></st1:PersonName><span
-  style='background:yellow;mso-highlight:yellow'>tual result &lt;font size=-1 </span><st1:PersonName><span
-   style='background:yellow;mso-highlight:yellow'>c</span></st1:PersonName><span
-  style='background:yellow;mso-highlight:yellow'>olor=&quot;#</span><st1:PersonName><span
-   style='background:yellow;mso-highlight:yellow'>c</span></st1:PersonName><span
-  style='background:yellow;mso-highlight:yellow'>08080&quot;&gt;&lt;<span
-  class=SpellE>i</span>&gt;a</span><st1:PersonName><span style='background:
-   yellow;mso-highlight:yellow'>c</span></st1:PersonName><span
-  style='background:yellow;mso-highlight:yellow'>tual&lt;/<span class=SpellE>i</span>&gt;&lt;/font&gt;&lt;/td&gt;<o:p></o:p></span></p>
+  <p>&lt;td bgcolor=&quot;#ffcfcf&quot;&gt;text &lt;font size=-1
+  color=&quot;#c08080&quot;&gt;&lt;i&gt;expected&lt;/i&gt;&lt;/font&gt;&lt;hr&gt;actual
+  result &lt;font size=-1
+  color=&quot;#c08080&quot;&gt;&lt;i&gt;actual&lt;/i&gt;&lt;/font&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3318,33 +3157,26 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'><o:p>&nbsp;</o:p></span></p>
+  <p><o:p>&nbsp;</o:p></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>error<o:p></o:p></span></p>
+  <p>error</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>error message<o:p></o:p></span></p>
+  <p>error message</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>&lt;td <span
-  class=SpellE>bg</span></span><st1:PersonName><span class=SpellE><span
-   style='background:yellow;mso-highlight:yellow'>c</span></span></st1:PersonName><span
-  class=SpellE><span style='background:yellow;mso-highlight:yellow'>olor</span></span><span
-  style='background:yellow;mso-highlight:yellow'>=&quot;#<span class=SpellE>ffff</span></span><st1:PersonName><span
-   class=SpellE><span style='background:yellow;mso-highlight:yellow'>c</span></span></st1:PersonName><span
-  class=SpellE><span style='background:yellow;mso-highlight:yellow'>f</span></span><span
-  style='background:yellow;mso-highlight:yellow'>&quot;&gt;text&lt;hr&gt;&lt;pre&gt;error
-  message&lt;/pre&gt;&lt;/td&gt;<o:p></o:p></span></p>
+  <p>&lt;td bgcolor=&quot;#ffffcf&quot;&gt;text&lt;hr&gt;&lt;pre&gt;error
+  message&lt;/pre&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3375,10 +3207,8 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td <span class=SpellE>bg</span><st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>olor</span>=&quot;#<span class=SpellE>efefef</span>”&gt;&lt;<span
-  class=SpellE>ul</span>&gt;&lt;<span class=SpellE>li</span>&gt;text&lt;/<span
-  class=SpellE>li</span>&gt;&lt;/<span class=SpellE>ul</span>&gt;&lt;/td&gt;</p>
+  <p>&lt;td
+  bgcolor=&quot;#efefefâ€&gt;&lt;ul&gt;&lt;li&gt;text&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3409,8 +3239,8 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td&gt;&lt;<span class=SpellE>ul</span>&gt;&lt;<span class=SpellE>li</span>&gt;text&lt;/<span
-  class=SpellE>li</span>&gt;&lt;/<span class=SpellE>ul</span>&gt; &lt;font <st1:PersonName>c</st1:PersonName>olor=&quot;#808080&quot;&gt;value&lt;/font&gt;&lt;/td&gt;</p>
+  <p>&lt;td&gt;&lt;ul&gt;&lt;li&gt;text&lt;/li&gt;&lt;/ul&gt; &lt;font
+  color=&quot;#808080&quot;&gt;value&lt;/font&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3434,8 +3264,7 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.StandardAnnotationFixture</span></span><span
-  style='color:silver'><o:p></o:p></span></p>
+  <p><span style='color:silver'>fat.StandardAnnotationFixture<o:p></o:p></span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -3462,7 +3291,7 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>OriginalHTML</b></span></p>
+  <p><b>OriginalHTML</b></p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3486,16 +3315,14 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><b>RenderedOutput</b></span><b>()<o:p></o:p></b></p>
+  <p><b>RenderedOutput()<o:p></o:p></b></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:2'>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td&gt;&lt;<span class=SpellE>ul</span>&gt;&lt;<span class=SpellE>li</span>&gt;line&lt;<span
-  class=SpellE>br</span>&gt;break&lt;/<span class=SpellE>li</span>&gt;&lt;/<span
-  class=SpellE>ul</span>&gt;&lt;/td&gt;</p>
+  <p>&lt;td&gt;&lt;ul&gt;&lt;li&gt;line&lt;br&gt;break&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3507,22 +3334,17 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>a<st1:PersonName>c</st1:PersonName>tual result</p>
+  <p>actual result</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td <span class=SpellE>bg</span><st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>olor</span>=&quot;#<span class=SpellE>ff</span><st1:PersonName><span
-   class=SpellE>c</span></st1:PersonName><span class=SpellE>f</span><st1:PersonName><span
-   class=SpellE>c</span></st1:PersonName><span class=SpellE>f</span>&quot;&gt;line&lt;<span
-  class=SpellE>br</span> /&gt;break &lt;font size=-1 <st1:PersonName>c</st1:PersonName>olor=&quot;#<st1:PersonName>c</st1:PersonName>08080&quot;&gt;&lt;<span
-  class=SpellE>i</span>&gt;expe<st1:PersonName>c</st1:PersonName>ted&lt;/<span
-  class=SpellE>i</span>&gt;&lt;/font&gt;&lt;hr&gt;a<st1:PersonName>c</st1:PersonName>tual
-  result &lt;font size=-1 <st1:PersonName>c</st1:PersonName>olor=&quot;#<st1:PersonName>c</st1:PersonName>08080&quot;&gt;&lt;<span
-  class=SpellE>i</span>&gt;a<st1:PersonName>c</st1:PersonName>tual&lt;/<span
-  class=SpellE>i</span>&gt;&lt;/font&gt;&lt;/td&gt;</p>
+  <p>&lt;td bgcolor=&quot;#ffcfcf&quot;&gt;line&lt;br /&gt;break &lt;font
+  size=-1
+  color=&quot;#c08080&quot;&gt;&lt;i&gt;expected&lt;/i&gt;&lt;/font&gt;&lt;hr&gt;actual
+  result &lt;font size=-1
+  color=&quot;#c08080&quot;&gt;&lt;i&gt;actual&lt;/i&gt;&lt;/font&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3553,11 +3375,8 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&lt;td <span class=SpellE>bg</span><st1:PersonName><span class=SpellE>c</span></st1:PersonName><span
-  class=SpellE>olor</span>=&quot;#<span class=SpellE>ffff</span><st1:PersonName><span
-   class=SpellE>c</span></st1:PersonName><span class=SpellE>f</span>&quot;&gt;line&lt;<span
-  class=SpellE>br</span> /&gt;break&lt;hr&gt;&lt;pre&gt;error
-  message&lt;/pre&gt;&lt;/td&gt;</p>
+  <p>&lt;td bgcolor=&quot;#ffffcf&quot;&gt;line&lt;br
+  /&gt;break&lt;hr&gt;&lt;pre&gt;error message&lt;/pre&gt;&lt;/td&gt;</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3574,8 +3393,7 @@ other annotations.<span style='background:yellow;mso-highlight:yellow'><o:p></o:
 
 <p><o:p>&nbsp;</o:p></p>
 
-<p>Fixtures may ask Fit to <st1:PersonName>c</st1:PersonName>onvert a string to
-HTML.</p>
+<p>Fixtures may ask Fit to convert a string to HTML.</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
@@ -3583,8 +3401,7 @@ HTML.</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p>Some <st1:PersonName>c</st1:PersonName>hara<st1:PersonName>c</st1:PersonName>ters
-are turned into entities.</p>
+<p>These specific characters are turned into entities.</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
@@ -3595,8 +3412,7 @@ are turned into entities.</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.TextToHtmlFixture</span></span><span
-  style='color:silver'><o:p></o:p></span></p>
+  <p><span style='color:silver'>fat.TextToHtmlFixture<o:p></o:p></span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -3627,7 +3443,7 @@ are turned into entities.</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>&amp;<span class=SpellE>lt</span>;</p>
+  <p>&amp;lt;</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
@@ -3653,9 +3469,8 @@ Feeds</span></a><span style='mso-fareast-font-family:SimSun'><o:p></o:p></span><
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
 <p>ASCII line feed codes are turned into HTML break tags.<span
-style='mso-spacerun:yes'>  </span>(In these examples, “\n” is ASCII 10, “new
-line”, and “\r” is ASCII 13, “<st1:PersonName>c</st1:PersonName>arriage
-return.”)</p>
+style='mso-spacerun:yes'>Â  </span>(In these examples, â€œ\nâ€ is ASCII 10, â€œnew
+lineâ€, and â€œ\râ€ is ASCII 13, â€œcarriage return.â€)</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
@@ -3666,8 +3481,7 @@ return.”)</p>
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.TextToHtmlFixture</span></span><span
-  style='color:silver'><o:p></o:p></span></p>
+  <p><span style='color:silver'>fat.TextToHtmlFixture<o:p></o:p></span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -3698,21 +3512,20 @@ return.”)</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>Unix &lt;<span class=SpellE>br</span> /&gt; line feed</p>
+  <p>Unix &lt;br /&gt; line feed</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:3'>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>Ma<st1:PersonName>c</st1:PersonName> \r line feed</p>
+  <p>Mac \r line feed</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>Ma<st1:PersonName>c</st1:PersonName> &lt;<span class=SpellE>br</span>
-  /&gt; line feed</p>
+  <p>Mac &lt;br /&gt; line feed</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:4'>
@@ -3725,42 +3538,32 @@ return.”)</p>
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>DOS &lt;<span class=SpellE>br</span> /&gt; line feed</p>
+  <p>DOS &lt;br /&gt; line feed</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>Ba</span><st1:PersonName><span
-   style='background:yellow;mso-highlight:yellow'>c</span></st1:PersonName><span
-  style='background:yellow;mso-highlight:yellow'>kwards \n\r line feed is seen
-  as two line feeds<o:p></o:p></span></p>
+  <p>Backwards \n\r line feed is seen as two line feeds</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span style='background:yellow;mso-highlight:yellow'>Ba</span><st1:PersonName><span
-   style='background:yellow;mso-highlight:yellow'>c</span></st1:PersonName><span
-  style='background:yellow;mso-highlight:yellow'>kwards &lt;<span class=SpellE>br</span>
-  /&gt;&lt;<span class=SpellE>br</span> /&gt; line feed is seen as two line
-  feeds<o:p></o:p></span></p>
+  <p>Backwards &lt;br /&gt;&lt;br /&gt; line feed is seen as two line feeds</p>
   </td>
  </tr>
 </table>
 
 <p><o:p>&nbsp;</o:p></p>
 
-<h3><a name="_Toc92540192"><span style='mso-fareast-font-family:SimSun'>Spa</span></a><st1:PersonName><span
- style='mso-bookmark:_Toc92540192'><span style='mso-fareast-font-family:SimSun'>c</span></span></st1:PersonName><span
-style='mso-bookmark:_Toc92540192'><span style='mso-fareast-font-family:SimSun'>es</span></span><span
+<h3><a name="_Toc92540192"><span style='mso-fareast-font-family:SimSun'>Spaces</span></a><span
 style='mso-fareast-font-family:SimSun'><br style='mso-special-character:line-break'>
 <![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
 <![endif]><o:p></o:p></span></h3>
 
-<p>Multiple adjoining spa<st1:PersonName>c</st1:PersonName>es are turned into
-&amp;<span class=SpellE>nbsp</span>; entities.</p>
+<p>Multiple adjoining spaces are turned into &amp;nbsp; entities.</p>
 
 <p><o:p>&nbsp;</o:p></p>
 
@@ -3771,8 +3574,7 @@ style='mso-fareast-font-family:SimSun'><br style='mso-special-character:line-bre
  <tr style='mso-yfti-irow:0'>
   <td valign=top style='border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fat.TextToHtmlFixture</span></span><span
-  style='color:silver'><o:p></o:p></span></p>
+  <p><span style='color:silver'>fat.TextToHtmlFixture<o:p></o:p></span></p>
   </td>
   <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
@@ -3797,14 +3599,13 @@ style='mso-fareast-font-family:SimSun'><br style='mso-special-character:line-bre
   <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>1<span style='mso-spacerun:yes'>     </span>2</p>
+  <p>1<span style='mso-spacerun:yes'>Â Â Â Â  </span>2</p>
   </td>
   <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
   border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p>1 &amp;<span class=SpellE>nbsp</span>; &amp;<span class=SpellE>nbsp</span>;
-  2</p>
+  <p>1 &amp;nbsp; &amp;nbsp; 2</p>
   </td>
  </tr>
 </table>
@@ -3819,7 +3620,7 @@ style='mso-fareast-font-family:SimSun'><br style='mso-special-character:line-bre
  style='border-collapse:collapse;mso-padding-alt:0in 0in 0in 0in'>
  <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
   <td valign=top style='padding:0in 5.4pt 0in 5.4pt'>
-  <p><span class=SpellE><span style='color:silver'>fit.Summary</span></span></p>
+  <p><span style='color:silver'>fit.Summary</span></p>
   </td>
  </tr>
 </table>

@@ -72,7 +72,7 @@ module Fit
       assert_equal 'a', Parse.html_to_text('a &nbsp;')
       assert_equal '&nbsp;', Parse.html_to_text('&amp;nbsp;')
       assert_equal '1     2', Parse.html_to_text('1 &nbsp; &nbsp; 2')
-      assert_equal '1     2', Parse.html_to_text("1 \xa0\xa0\xa0\xa02")
+      assert_equal '1     2', Parse.html_to_text("1 \302\240\302\240\302\240\302\2402")
       assert_equal 'a', Parse.html_to_text('  <tag />a')
       assert_equal "a\nb", Parse.html_to_text('a<br />b')
       assert_equal 'ab', Parse.html_to_text('<font size=+1>a</font>b')
@@ -87,7 +87,7 @@ module Fit
       assert_equal 'a>b & b>c &&', Parse.unescape('a&gt;b&nbsp;&amp;&nbsp;b>c &&')
       assert_equal '&amp;&amp;', Parse.unescape('&amp;amp;&amp;amp;')
       assert_equal 'a>b & b>c &&', Parse.unescape('a&gt;b&nbsp;&amp;&nbsp;b>c &&')
-      assert_equal "'\"\"'", Parse.unescape("\221“”\222")
+      assert_equal "'\"\"'", Parse.unescape("\342\200\230\342\200\234\342\200\235\342\200\231")
       assert_equal 'no-entity', Parse.unescape('no-entity')
     end
     def test_unescape_numeric_entities
@@ -109,7 +109,7 @@ module Fit
       assert_equal '', Parse.condense_whitespace(' ')
       assert_equal '', Parse.condense_whitespace('  ')
       assert_equal '', Parse.condense_whitespace('   ')
-      assert_equal '', Parse.condense_whitespace("\240")
+      assert_equal '', Parse.condense_whitespace("\302\240")
     end
   end
 

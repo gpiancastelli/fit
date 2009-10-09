@@ -5,6 +5,8 @@ require 'fit/fixture'
 require 'fit/parse'
 
 require 'fileutils' # for report generation
+require 'iconv' # for I/O encoding
+require 'stringio' # to help fix any possibly invalid byte sequence
 
 module Fit
 
@@ -13,9 +15,11 @@ module Fit
 
     def initialize
       @fixture = Fixture.new
+      @encoding = nil
     end
 
-    def run args
+    def run args, opts=nil
+      @encoding = opts[:encoding] unless opts.nil?
       process_args args
       process
       $stderr.puts @fixture.totals
@@ -37,7 +41,13 @@ module Fit
       @fixture.summary['input file'] = input_name
       @fixture.summary['input update'] = input_file.mtime.to_s
       @fixture.summary['output file'] = output_name
-      @input = input_file.read
+      unless @encoding.nil?
+        conv = Iconv.new 'UTF-8', @encoding
+        @input = conv.iconv(input_file.read)
+        @input << conv.iconv(nil)
+      else
+        @input = input_file.read
+      end
       input_file.close
     end
 
@@ -53,7 +63,18 @@ module Fit
       rescue Exception => e
         exception e
       end
-      @tables.print @output
+      unless @encoding.nil?
+        buffer = StringIO.new
+        conv = Iconv.new 'UTF-8//IGNORE', 'UTF-8'
+        @tables.print buffer, conv
+        buffer.print conv.iconv(nil)
+        conv = Iconv.new @encoding, 'UTF-8'
+        @output.print conv.iconv(buffer.string)
+        @output << conv.iconv(nil)
+        buffer.close
+      else
+        @tables.print @output
+      end
       @output.close
     end
 

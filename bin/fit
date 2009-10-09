@@ -7,21 +7,23 @@ require 'fit/version'
 
 require 'optparse'
 
-options = OptionParser.new
-options.on("-v", "--version") do
+options = {}
+
+option_parser = OptionParser.new
+option_parser.on("-v", "--version") do
   puts Fit::VERSION_BLURB
   exit 0
 end
-options.on("-h", "--help") do
+option_parser.on("-h", "--help") do
   puts Fit::HELP_BLURB
   exit 0
 end
-options.on("-eENC", "--encoding=ENC", String) do |e|
-  raise NotImplementedError.new(e)
+option_parser.on("-eENC", "--encoding=ENC", String) do |enc|
+  options[:encoding] = enc
 end
 
 begin
-  args = options.parse(ARGV)
+  args = option_parser.parse(ARGV)
 rescue OptionParser::InvalidOption => invalid
   puts "#{File.basename($0)}: #{invalid.message}"
   exit -1
@@ -31,4 +33,4 @@ report = args[1]
 unless report.nil?
   Fit::Parse.footnote_path = File.dirname(report) + File::SEPARATOR
 end
-Fit::FileRunner.new.run args
+Fit::FileRunner.new.run(args, options.empty? ? nil : options)

@@ -68,22 +68,22 @@ name of the input HTML file containing tables to be tested, the second
 is the name of the output HTML file which will be created by RubyFIT and
 will contain the results of the tests.
 
-As of version 1.2, the command-line script supports an <kbd>--encoding</kbd>
+As of version 1.2, the command-line script supports an <tt>--encoding</tt>
 option, used to indicate the encoding of the input and output files.
 Internally, RubyFIT uses UTF-8 as the default encoding to substitute
 characters such as non-breaking spaces and typographic quotes. This means
 that, if your HTML files are already encoded in UTF-8, you don't need to
-pass the <kbd>--encoding</kbd> option on the command line; otherwise, you
+pass the <tt>--encoding</tt> option on the command line; otherwise, you
 need to supply the proper character encoding in order to have the script
 correctly recognize and produce HTML code.
 
 As an example, the <tt>doc/spec</tt> directory contains two files for the
 parsing Fit specification, each with a different encoding. The first file is
 named <tt>parse.html</tt> and is encoded in UTF-8; this is the file that is
-run by the +rake fitspec+ command. The second file is named
+run by the <tt>rake fitspec</tt> command. The second file is named
 <tt>parse-windows-1252.html</tt> and is encoded in windows-1252. When fed
 to the +fit+ script on the command line, the tests in this file pass only
-if the proper <kbd>--encoding=windows-1252</kbd> option is supplied.
+if the proper <tt>--encoding=windows-1252</tt> option is supplied.
 
 === RubyFIT from a web server
 

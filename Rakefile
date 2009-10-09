@@ -91,6 +91,8 @@ Rake::FitTask.new(:fitspec) do |t|
                :right => 83, :wrong => 0, :ignores => 0, :exceptions => 0 }
     suite << { :name => 'annotation',
                :right => 47, :wrong => 0, :ignores => 0, :exceptions => 0 }
+    suite << { :name => 'ui',
+               :right => 30, :wrong => 0, :ignores => 0, :exceptions => 0 }
   end
 end
 

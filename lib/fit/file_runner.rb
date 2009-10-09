@@ -23,10 +23,14 @@ module Fit
     end
 
     def process_args args
-      error "Usage: #{File.basename($0)} input_file output_file" unless args.size == 2
-
+      error "no input file" if args[0].nil?
       input_name = File.expand_path args[0]
-      input_file = File.open input_name
+      begin
+        input_file = File.open input_name
+      rescue Errno::ENOENT
+        error "#{input_name}: file not found"
+      end
+      error "no output file" if args[1].nil?
       output_name = File.expand_path args[1]
       FileUtils.mkpath File.dirname(output_name)
       @output = File.open output_name, 'w'
@@ -59,7 +63,7 @@ module Fit
     end
 
     def error msg
-      $stderr.puts msg
+      $stderr.puts "#{File.basename($0)}: #{msg}"
       exit -1
     end
 

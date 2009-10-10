@@ -74,8 +74,8 @@ Internally, RubyFIT uses UTF-8 as the default encoding to substitute
 characters such as non-breaking spaces and typographic quotes. This means
 that, if your HTML files are already encoded in UTF-8, you don't need to
 pass the <tt>--encoding</tt> option on the command line; otherwise, you
-need to supply the proper character encoding in order to have the script
-correctly recognize and produce HTML code.
+may need to supply the proper character encoding in order to have the
+script correctly recognize and produce HTML code.
 
 As an example, the <tt>doc/spec</tt> directory contains two files for the
 parsing Fit specification, each with a different encoding. The first file is

@@ -18,7 +18,7 @@ module Eg
         cell.add_to_body Fit::Fixture.gray('no match')
       end
     end
-    def expand pattern; Dir[pattern]; end
+    def expand pattern; Dir[pattern].sort; end
     protected
     def do_row_files row, files; do_files row, files; end
     def do_files row, files

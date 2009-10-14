@@ -13,7 +13,7 @@ module Fat
       escape_ascii(Fit::Parse.html_to_text(html))
     end
     def escape_ascii text
-      text.gsub("\x0a", "\\n").gsub("\x0d", "\\r").gsub("\xa0", " ")
+      text.gsub([0x0a].pack('U'), "\\n").gsub([0x0d].pack('U'), "\\r").gsub([0xa0].pack('U'), " ")
     end
   end
 

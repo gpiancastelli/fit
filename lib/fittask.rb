@@ -4,6 +4,8 @@ require 'rake/tasklib'
 require 'fit/file_runner'
 require 'fit/parse'
 
+require 'stringio'
+
 module Rake
 
   class FitReportRunner < Fit::FileRunner
@@ -23,14 +25,8 @@ module Rake
       input_file = File.open input_name
       @input = input_file.read
       input_file.close
-      @output = OutputStream.new
+      @output = StringIO.new
     end
-  end
-    
-  # A dummy output stream to avoid creating output files
-  class OutputStream < String
-    def print text; end
-    def close; end
   end
 
   # Create a task that runs a set of FIT tests.

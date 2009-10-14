@@ -5,6 +5,7 @@ require 'test/unit'
 # Make the test run location independent
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 require 'fit/file_runner'
+require 'stringio'
 
 module Fit
   
@@ -29,7 +30,7 @@ module Fit
       runner = FileRunner.new
       runner.fixture = TempFixture.new
       runner.input = text
-      runner.output = OutputStream.new
+      runner.output = StringIO.new
       runner.process
 
       assert_equal 'fit.Fixture', $tempParse.leaf.text
@@ -42,11 +43,5 @@ module Fit
       $tempParse = tables
     end
   end 
-
-  # A dummy output stream
-  class OutputStream < String
-    def print text; end
-    def close; end
-  end
 
 end

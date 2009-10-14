@@ -9,37 +9,37 @@ require 'stringio'
 module Rake
 
   class FitReportRunner < Fit::FileRunner
-    def run args
+    def run args, opts=nil
+      @encoding = opts[:encoding].upcase unless opts.nil? 
       process_args args
       process
     end
   end
   
   class FitRunner < Fit::FileRunner
-    def run args
+    def run args, opts=nil
+      @encoding = opts[:encoding].upcase unless opts.nil? 
       process_args args
       process
     end
-    def process_args args
-      input_name = File.expand_path args[0]
-      input_file = File.open input_name
-      @input = input_file.read
-      input_file.close
+    def check_output_file arg; end
+    def create_output_file output_name
       @output = StringIO.new
     end
   end
 
   # Create a task that runs a set of FIT tests.
   #
-  # If rake is invoked with a ATEST command line option, then the list of
+  # If rake is invoked with an ATEST command line option, then the list of
   # test files will be overridden to include only the filename specified on
   # the command line.  This provides an easy way to run just one test.
   # The exact syntax of the ATEST option is as follows:
-  #    ATEST=/path/to/FileHtml:Right:Wrong:Ignores:Exceptions
+  #    ATEST=/path/to/FileHtml:Right:Wrong:Ignores:Exceptions:Encoding
   # where you can include a path to the HTML file, which must be specified
-  # without the .html extension; and where Rights, Wrong, Ignores and
-  # Exceptions are the numbers of the expected results from the test run.
-  # Note that the report path will be the same as the test path.
+  # without the .html extension; where Rights, Wrong, Ignores and Exceptions
+  # are the numbers of the expected results from the test run; and where
+  # Encoding is the character encoding of the input file. Note that the
+  # report path will be the same as the test path.
   #
   class FitTask < TaskLib
   
@@ -54,9 +54,8 @@ module Rake
         atest = ENV['ATEST'].split ':'
         filename = atest[0]
         test_name = File.basename(filename)
-        test = { :name => test_name,
-                 :right => atest[1].to_i, :wrong => atest[2].to_i,
-                 :ignores => atest[3].to_i, :exceptions => atest[4].to_i }
+        test = { :name => test_name, :right => atest[1].to_i, :wrong => atest[2].to_i,
+                 :ignores => atest[3].to_i, :exceptions => atest[4].to_i, :encoding => atest[5] }
         suite = AcceptanceTestSuite.new
         suite << test
         suite.test_path = suite.report_path = File.dirname(filename) + File::SEPARATOR
@@ -112,7 +111,7 @@ module Rake
       end
 
       task task_report_name do 
-         raise 'Tests failed.' if @fail_on_failed_test && @tests_failed
+        raise 'Tests failed.' if @fail_on_failed_test && @tests_failed
       end
 
       self
@@ -137,35 +136,36 @@ module Rake
       def run_tests_with_reports; run_tests true; end;
 
       def run_tests with_report=false 
-         all_passed = true
-         @tests.each do |test|
-            begin
-               runner_args = [@test_path + "#{test[:name]}.html"]
-               puts "Running #{test[:name]}.html"
+        all_passed = true
+        @tests.each do |test|
+          begin
+            runner_args = [@test_path + "#{test[:name]}.html"]
+            puts "Running #{test[:name]}.html"
 
-               if with_report 
-                  report_file=@report_path + "Report_#{test[:name]}.html" 
-                  puts "   (Writing report to #{report_file})"
-                  runner_args << report_file
-                  runner = Rake::FitReportRunner.new
-               else
-                  runner = Rake::FitRunner.new
-               end
-               
-               runner.run runner_args
-               result = runner.fixture.counts
-               verify test, result
-            rescue Exception => e
-               puts "   #{test[:name]} failed: #{e}"
-               all_passed = false
+            if with_report 
+              report_file = @report_path + "Report_#{test[:name]}.html" 
+              puts "   (Writing report to #{report_file})"
+              runner_args << report_file
+              runner = Rake::FitReportRunner.new
+            else
+              runner = Rake::FitRunner.new
             end
-         end
-         all_passed
+
+            opts = test[:encoding].nil? ? nil : {:encoding => test[:encoding]} 
+            runner.run runner_args, opts
+            result = runner.fixture.counts
+            verify test, result
+          rescue Exception => e
+            puts "   #{test[:name]} failed: #{e}"
+            all_passed = false
+          end
+        end
+        all_passed
       end
 
       def verify test, result
-         [:exceptions,:wrong].each { |symbol| test[symbol] = 0 if test[symbol].nil? }
-         [:right, :wrong, :ignores, :exceptions].each do |symbol|
+        [:exceptions, :wrong].each { |symbol| test[symbol] = 0 if test[symbol].nil? }
+        [:right, :wrong, :ignores, :exceptions].each do |symbol|
           count = result.method(symbol).call
           expected = test[symbol]
           unless expected.nil? || count == expected

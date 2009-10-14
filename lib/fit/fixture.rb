@@ -2,8 +2,9 @@
 # Released under the terms of the GNU General Public License version 2 or later.
 
 require 'fit/scientific_double'
-require 'parsedate'
 require 'fit/fixture_loader'
+
+require 'date'
 
 module Fit
 
@@ -269,7 +270,10 @@ module Fit
     end
 
     def parse string, klass
-      return ParseDate.parsedate(string) if klass == ParseDate
+      if klass == Date
+        d = Date._parse string
+        return [d[:year], d[:mon], d[:mday], d[:hour], d[:min], d[:sec], d[:zone], d[:wday]] 
+      end
       return ScientificDouble.value_of(string) if klass == ScientificDouble
       return string if klass == String
       nil

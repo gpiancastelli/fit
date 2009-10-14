@@ -1,7 +1,7 @@
 # Copyright (c) 2002 Cunningham & Cunningham, Inc.
 # Released under the terms of the GNU General Public License version 2 or later.
 
-require 'parsedate'
+require 'date'
 
 module Eg
   module Music
@@ -48,7 +48,9 @@ module Eg
         m.track_number = data[6].to_i
         m.track_count = data[7].to_i
         m.year = data[8].to_i
-        m.date = Time.gm(*ParseDate.parsedate(data[9]).compact)
+        d = Date._parse data[9]
+        d_array = [d[:year], d[:mon], d[:mday], d[:hour], d[:min], d[:sec], d[:zone], d[:wday]] 
+        m.date = Time.gm(*d_array.compact)
         m
       end
 

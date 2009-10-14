@@ -206,7 +206,9 @@ module Fit
 
     def Parse.condense_whitespace s
       not_breaking_space = [0x00a0].pack('U')
-      s.gsub(%r{\s+}, ' ').gsub(not_breaking_space, ' ').gsub(%r{&nbsp;}, ' ').strip
+      # Hack to work around not_breaking_space being considered
+      # a normal whitespace in Ruby 1.9, thus matching %r{\s+}
+      s.gsub(not_breaking_space, '&nbsp;').gsub(%r{\s+}, ' ').gsub(%r{&nbsp;}, ' ').strip
     end
 
     # The original implementation of footnote hardcodes the creation path,

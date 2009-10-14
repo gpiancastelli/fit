@@ -70,7 +70,7 @@ module Fit
       #raise "Couldn't load file #{file_name} or file #{file_name.downcase}"
     end
     
-    @@fixture_packages = Set.new('Fit::')
+    @@fixture_packages = Set.new(['Fit::'])
     # This method adds the name of a module as a 'package' we should search for fixtures.
     # Supports import_fixture
     def FixtureLoader.add_fixture_package module_name

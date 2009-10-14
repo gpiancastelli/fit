@@ -3,7 +3,7 @@
 
 require 'fit/row_fixture'
 
-require 'parsedate'
+require 'date'
 
 module Eg
   module Music
@@ -13,7 +13,9 @@ module Eg
       def query; MusicLibrary.display_contents; end
       def parse string, klass
         if klass == Time
-          Time.gm(*ParseDate.parsedate(string).compact)
+          d = Date._parse string
+          d_array = [d[:year], d[:mon], d[:mday], d[:hour], d[:min], d[:sec], d[:zone], d[:wday]] 
+          Time.gm(*d_array.compact)
         else
           super
         end

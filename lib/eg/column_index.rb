@@ -31,8 +31,9 @@ module Eg
       # ...then find the columns in these classes
       columns = []
       names.each do |name|
-        obj = Fit::FixtureLoader.new.find_class(name).new
-        attributes = obj.methods - Object.new.methods
+        obj = @@loader.find_class(name).new
+        # Ruby 1.9 returns method names as symbols
+        attributes = (obj.methods - Object.new.methods).collect {|a| a.to_s}
         setters = attributes.dup.delete_if {|a| a[-1..-1] != "="}
         attributes -= setters
         setters.each do |s|
@@ -58,7 +59,7 @@ module Eg
     end
 
     def parse_class name
-      Fit::FixtureLoader.new.find_class(name)
+      @@loader.find_class(name)
     end
     
     # Helper class

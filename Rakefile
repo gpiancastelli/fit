@@ -112,9 +112,11 @@ end
 
 require 'rake/gempackagetask'
 
+require 'fit/version'
+
 spec = Gem::Specification.new do |s|
   s.name = 'fit'
-  s.version = '1.1'
+  s.version = Fit::VERSION
   s.author = 'Giulio Piancastelli'
   # See the README for other authors/developers/contributors
   s.email = 'giulio.piancastelli@gmail.com'
@@ -122,7 +124,13 @@ spec = Gem::Specification.new do |s|
   s.rubyforge_project = 'fit'
   s.platform = Gem::Platform::RUBY
   s.summary = 'A Ruby port of FIT (Framework for Integrated Testing)'
-  s.files = FileList["{bin,lib,test,doc}/**/*"].to_a + ["Rakefile"]
+  s.description = <<EOF_DESCRIPTION
+RubyFIT is a tool for enhancing communication and collaboration in
+software development. It allows customers, testers, and programmers
+to learn what their software should do and what it does do, by
+automatically comparing customers' expectations to actual results.
+EOF_DESCRIPTION
+  s.files = FileList["{bin,lib,test,doc}/**/*"].to_a + ["Rakefile", "CHANGELOG"]
   s.require_path = 'lib'
   # s.autorequire something?
   # set for executable scripts in the bin/ subdirectory

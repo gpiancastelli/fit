@@ -1,0 +1,27 @@
+1.2
+
+  * Support Ruby 1.9.
+  * Explicitly force Dir.glob order to avoid inconsistencies on Ruby 1.8.7.
+  * Compliance with Fit 1.2 specification (both mandatory and recommended):
+    * support numeric entities in HTML files;
+    * provide an --encoding option on the command line to set the character
+      encoding used for reading input and writing output files;
+    * provide --version and --help command line options.
+  * Support character encoding also from within Rake::FitTask.
+  * Better error messages on the command line when input/output files are not
+    found/given.
+  * Speed up the process of loading fixtures in Fit::FixtureLoader.
+  * Report every exception within Fitnesse. (RubyForge patch #5100)
+  * Multiple fixtures executed on the same HTML file now use a single loader.
+    (RubyForge bug #14379)
+  * Distribution now includes examples from the Fit book.
+  * Better integer parsing in Fit::GenericAdapter. (RubyForge bug #25897)
+  * Better float parsing in Fit::GenericAdapter. (RubyForge bug #25640)
+  * Load class AFixture even when class A exists.
+  * Avoid extra whitespace when converting HTML table header text to Ruby
+    method names. (RubyForge bug #22283)
+  * Use the canonical string representation for arrays.
+
+1.1
+
+  * Initial release, compliant with Fit 1.1 specification.
